@@ -59,7 +59,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(45, 9);
+            this.label2.Location = new System.Drawing.Point(36, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(483, 23);
             this.label2.TabIndex = 6;
@@ -70,7 +70,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(95, 50);
+            this.label3.Location = new System.Drawing.Point(86, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 15);
             this.label3.TabIndex = 7;
@@ -79,7 +79,7 @@
             // txtID
             // 
             this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(126, 45);
+            this.txtID.Location = new System.Drawing.Point(117, 45);
             this.txtID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtID.Name = "txtID";
             // 
@@ -92,7 +92,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(126, 71);
+            this.txtDescripcion.Location = new System.Drawing.Point(117, 71);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(318, 36);
@@ -103,7 +103,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 76);
+            this.label5.Location = new System.Drawing.Point(33, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 15);
             this.label5.TabIndex = 12;
@@ -112,7 +112,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(449, 237);
+            this.btnEliminar.Location = new System.Drawing.Point(443, 203);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(79, 24);
             this.btnEliminar.TabIndex = 14;
@@ -121,7 +121,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(449, 177);
+            this.btnModificar.Location = new System.Drawing.Point(443, 143);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(79, 24);
             this.btnModificar.TabIndex = 15;
@@ -131,7 +131,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(449, 147);
+            this.btnGuardar.Location = new System.Drawing.Point(443, 113);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(79, 24);
             this.btnGuardar.TabIndex = 16;
@@ -141,7 +141,7 @@
             // 
             // grvConcepto
             // 
-            this.grvConcepto.Location = new System.Drawing.Point(45, 123);
+            this.grvConcepto.Location = new System.Drawing.Point(39, 113);
             // 
             // 
             // 
@@ -166,7 +166,7 @@
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(449, 207);
+            this.radButton1.Location = new System.Drawing.Point(443, 173);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(79, 24);
             this.radButton1.TabIndex = 15;
@@ -178,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 300);
+            this.ClientSize = new System.Drawing.Size(551, 289);
             this.Controls.Add(this.grvConcepto);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.radButton1);
