@@ -57,7 +57,7 @@
             this.txtImporteTotal = new Telerik.WinControls.UI.RadTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.TxtImporte = new Telerik.WinControls.UI.RadTextBox();
-            this.radButton4 = new Telerik.WinControls.UI.RadButton();
+            this.BtnSaldosFinales = new Telerik.WinControls.UI.RadButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtgSaldoInicial = new Telerik.WinControls.UI.RadGridView();
             this.BtnEliminar = new Telerik.WinControls.UI.RadButton();
@@ -78,7 +78,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtImporteTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtImporte)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSaldosFinales)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSaldoInicial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSaldoInicial.MasterTemplate)).BeginInit();
@@ -274,7 +274,7 @@
             this.groupBox2.Controls.Add(this.txtImporteTotal);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.TxtImporte);
-            this.groupBox2.Controls.Add(this.radButton4);
+            this.groupBox2.Controls.Add(this.BtnSaldosFinales);
             this.groupBox2.Location = new System.Drawing.Point(31, 160);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(719, 69);
@@ -337,14 +337,15 @@
             this.TxtImporte.ThemeName = "VisualStudio2012Light";
             this.TxtImporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtImporte_KeyPress);
             // 
-            // radButton4
+            // BtnSaldosFinales
             // 
-            this.radButton4.Location = new System.Drawing.Point(560, 27);
-            this.radButton4.Name = "radButton4";
-            this.radButton4.Size = new System.Drawing.Size(153, 24);
-            this.radButton4.TabIndex = 7;
-            this.radButton4.Text = "VER SALDOS FINALES";
-            this.radButton4.ThemeName = "VisualStudio2012Light";
+            this.BtnSaldosFinales.Location = new System.Drawing.Point(560, 27);
+            this.BtnSaldosFinales.Name = "BtnSaldosFinales";
+            this.BtnSaldosFinales.Size = new System.Drawing.Size(153, 24);
+            this.BtnSaldosFinales.TabIndex = 7;
+            this.BtnSaldosFinales.Text = "VER SALDOS FINALES";
+            this.BtnSaldosFinales.ThemeName = "VisualStudio2012Light";
+            this.BtnSaldosFinales.Click += new System.EventHandler(this.BtnSaldosFinales_Click);
             // 
             // groupBox3
             // 
@@ -531,7 +532,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtImporteTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtImporte)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSaldosFinales)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSaldoInicial.MasterTemplate)).EndInit();
@@ -573,7 +574,7 @@
         private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.Label label13;
         private Telerik.WinControls.UI.RadButton btnComprobante;
-        private Telerik.WinControls.UI.RadButton radButton4;
+        private Telerik.WinControls.UI.RadButton BtnSaldosFinales;
         private Telerik.WinControls.UI.RadButton BtnCancelar;
         private Telerik.WinControls.UI.RadButton BtnGuardar;
         private System.Windows.Forms.Label lblFecha;

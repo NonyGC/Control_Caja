@@ -37,7 +37,6 @@ namespace CapaPresentacion
             cargarcboDocumento();
             cargarcboConcepto();
 
-
         }
         private void dropDownListLimitAutocomplete()
         {
@@ -208,13 +207,13 @@ namespace CapaPresentacion
 
         private void BtnCerarCaja_Click(object sender, EventArgs e)
         {
+            if (MCCboCodigo.SelectedValue == null)
+                return;
             if (obtenerValMCCboCodigoSeleccionado("Estado") == "True")
             {
                 RadMessageBox.Show("CAJA ESTA CERRADO", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error);
                 return;
             }
-            if (MCCboCodigo.SelectedValue == null)
-                return;
             var InputBoxObs = RadInputBox.Show("[Cierre de Caja] Ingrese observación :", "MBCORP");
             if (string.IsNullOrEmpty(InputBoxObs))
                 return;
@@ -269,6 +268,8 @@ namespace CapaPresentacion
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            if (MCCboCodigo.SelectedValue == null)
+                return;
             if (obtenerValMCCboCodigoSeleccionado("Estado") == "True")
             {
                 RadMessageBox.Show("CAJA ESTA CERRADO", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error);
@@ -303,6 +304,9 @@ namespace CapaPresentacion
         }
         private void RbtModificar_Click(object sender, EventArgs e)
         {
+            if (MCCboCodigo.SelectedValue == null)
+                return;
+
             if (obtenerValMCCboCodigoSeleccionado("Estado") == "True")
             {
                 RadMessageBox.Show("CAJA ESTA CERRADO", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error);

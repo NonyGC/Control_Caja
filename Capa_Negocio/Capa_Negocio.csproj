@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CajaCierreBL.cs" />
     <Compile Include="CajaInicioBL.cs" />
     <Compile Include="ConceptoBL.cs" />
     <Compile Include="DocumentoBL.cs" />

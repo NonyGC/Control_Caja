@@ -179,17 +179,21 @@ namespace CapaPresentacion
             var codigo = dtgSaldoInicial.CurrentRow.Cells["Codigo"].Value.ToString();
             if (string.IsNullOrEmpty(codigo))
                 return;
-            if (RadMessageBox.Show("¿REALMENTE DESEA ELIMINAR?", "MBCORP", MessageBoxButtons.YesNo, RadMessageIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            int estadoCaja = Convert.ToInt16(dtgSaldoInicial.CurrentRow.Cells["Estado"].Value);
+            if (estadoCaja == 0)
             {
-                CajaIniEN.ID = codigo;
-                bool EstadoEjecucion = CajaIniBL.EliminarCajaInicio(CajaIniEN,EmpresaEN.idEmpresa);
-                if (EstadoEjecucion)
+                if (RadMessageBox.Show("¿REALMENTE DESEA ELIMINAR?", "MBCORP", MessageBoxButtons.YesNo, RadMessageIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    RadMessageBox.Show("SE ELIMINO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
-                    cargarGrillaCajaInicio();
+                    CajaIniEN.ID = codigo;
+                    bool EstadoEjecucion = CajaIniBL.EliminarCajaInicio(CajaIniEN, EmpresaEN.idEmpresa);
+                    if (EstadoEjecucion)
+                    {
+                        RadMessageBox.Show("SE ELIMINO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
+                        cargarGrillaCajaInicio();
+                    }
                 }
             }
-
+            
         }
 
         private void cboDocumento_Enter(object sender, EventArgs e)
@@ -197,9 +201,11 @@ namespace CapaPresentacion
             cargarCboDocumento();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnSaldosFinales_Click(object sender, EventArgs e)
         {
-           
+            FrmSaldosFinales frm = new FrmSaldosFinales();
+            frm.ShowDialog();
+            frm.Dispose();
         }
     }
 }

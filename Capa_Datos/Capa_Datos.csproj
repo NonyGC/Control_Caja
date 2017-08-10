@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDAO.cs" />
+    <Compile Include="CajaCierreDAO.cs" />
     <Compile Include="CajaInicioDAO.cs" />
     <Compile Include="ConceptoDAO.cs" />
     <Compile Include="DocumentoDAO.cs" />
