@@ -13,10 +13,6 @@ namespace Capa_Negocio
     {
         CajaInicioDAO CajDAO = new CajaInicioDAO();
 
-        public string ObtenerCodigo()
-        { 
-            return CajDAO.ObtenerCodigo();
-        }
 
         public bool GuardarNuevaCajaInicio(CajaInicioEN cajaIniEN)
         {
@@ -31,6 +27,16 @@ namespace Capa_Negocio
         public bool ActualizarCajaInicio(CajaInicioEN cajaIniEN)
         { 
             return CajDAO.ActualizarCajaInicio(cajaIniEN);
+        }
+
+        public bool EliminarCajaInicio(CajaInicioEN cajaIniEN, string idEmpresa)
+        {
+            return CajDAO.EliminarCajaInicio(cajaIniEN, idEmpresa);
+        }
+
+        public string ObtenerCodigo()
+        {
+            return CajDAO.ObtenerCodigo();
         }
     }
 }

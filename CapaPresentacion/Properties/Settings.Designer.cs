@@ -34,5 +34,16 @@ namespace CapaPresentacion.Properties {
                 this["Setting"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MBOSISTEMAS-PC\\SQLEXPRESS;Initial Catalog=DBCAJACHICA;Integrated Secu" +
+            "rity=True")]
+        public string DBCAJACHICAConnectionString {
+            get {
+                return ((string)(this["DBCAJACHICAConnectionString"]));
+            }
+        }
     }
 }

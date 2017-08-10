@@ -30,6 +30,74 @@ namespace Capa_Datos
             return dtCajaIni;
         }
 
+        public bool AgregarNuevoCajaCierre(CajaCierre cajCEN)
+        {
+            try
+            {
+                int i;
+                var _ = cajCEN;
+                SqlCommand cmd = CommandProcedure("USP_CajaCierre_REGISTRAR");
+                object[] env = { _.id,_.Empresa, _.SaldoIncial, _.TotalIngreso, _.TotalEgreso, _.SaldoFinal, _.Observacion };
+                cmd = Parameters(cmd, env);
+                i = cmd.ExecuteNonQuery();
+                return i > 0 ? true : false;
+            }
+            catch (SqlException ex)
+            {
+                RadMessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                CloseDB();
+            }
+        }
+
+        public bool actualizarMovimiento(MovimientoEN movEN)
+        {
+            try
+            {
+                int i;
+                var _ = movEN;
+                SqlCommand cmd = CommandProcedure("USP_Movimiento_ACTUALIZAR");
+                object[] env = { _.IdMov,_.IDCaja, _.Concepto, _.Observacion, _.IDDocumento, _.Serie, _.Numero, _.TipoMovimiento, _.Monto };
+                cmd = Parameters(cmd, env);
+                i = cmd.ExecuteNonQuery();
+                return i > 0 ? true : false;
+            }
+            catch (SqlException ex)
+            {
+                RadMessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                CloseDB();
+            }
+        }
+
+        public bool ActualizarEtadoCaja(string idCajaInicio)
+        {
+            try
+            {
+                int i;
+                SqlCommand cmd = CommandText("UPDATE [dbo].[CajaInicio]  SET [Estado] = '1' WHERE [ID]=@id");
+                cmd.Parameters.AddWithValue("@id", idCajaInicio);
+                i = cmd.ExecuteNonQuery();
+                return i > 0 ? true : false;
+            }
+            catch (SqlException ex)
+            {
+                RadMessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                CloseDB();
+            }
+
+        }
+
         public DataTable ObtenerListadoMoviento(string IDCaja)
         {
             DataTable dtMovi = new DataTable();

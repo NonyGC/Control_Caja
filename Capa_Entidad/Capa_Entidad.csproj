@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CajaCierre.cs" />
     <Compile Include="CajaInicioEN.cs" />
     <Compile Include="ConceptoEN.cs" />
     <Compile Include="DocumentoEN.cs" />

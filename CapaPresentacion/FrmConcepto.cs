@@ -56,7 +56,7 @@ namespace CapaPresentacion
                 {
                     RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
                     cargarGrillaConcept();
-                    //limpiarControlesEditables();
+                    limpiarControlesEditables();
                 }
             }
             if (btnGuardar.Text == "ACTUALIZAR")
@@ -72,17 +72,42 @@ namespace CapaPresentacion
                 {
                     RadMessageBox.Show("SE ACTUALIZO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
                     cargarGrillaConcept();
-                    //limpiarControlesEditables();
+                    limpiarControlesEditables();
+                    btnGuardar.Text = "GUARDAR";
                 }
 
             }
         }
 
+        private void limpiarControlesEditables()
+        {
+            txtID.Clear();
+            txtDescripcion.Clear();
+        }
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
             var CurrntRow = grvConcepto.CurrentRow;
-            txtID.Text=CurrntRow.Cells["ID"].ToString();
-            txtDescripcion.Text= CurrntRow.Cells["Descripcion"].ToString();
+            txtID.Text=CurrntRow.Cells["ID"].Value.ToString();
+            txtDescripcion.Text= CurrntRow.Cells["Descripcion"].Value.ToString();
+            btnGuardar.Text = "ACTUALIZAR";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string id = grvConcepto.CurrentRow.Cells["ID"].Value.ToString();
+            if (string.IsNullOrEmpty(id))
+                return;
+            if (RadMessageBox.Show("¿REALMENTE DESEA ELIMINAR?", "MBCORP", MessageBoxButtons.YesNo, RadMessageIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                ConEN.ID = id;
+                bool EstadoEjecucion = ConBL.EliminarDocumento(ConEN);
+                if (EstadoEjecucion)
+                {
+                    RadMessageBox.Show("SE ELIMINO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
+                    cargarGrillaConcept();
+                }
+            }
         }
     }
 }

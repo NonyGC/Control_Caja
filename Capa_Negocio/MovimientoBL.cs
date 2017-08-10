@@ -31,5 +31,20 @@ namespace Capa_Negocio
         {
             return MovDAO.ObtenerListadoMoviento(v);
         }
+
+        public bool AgregarNuevoCajaCierre(CajaCierre cajCEN)
+        {
+            return MovDAO.AgregarNuevoCajaCierre(cajCEN);
+        }
+
+        public bool ActualizarEtadoCaja(string idCajaInicio)
+        {
+            return MovDAO.ActualizarEtadoCaja(idCajaInicio);
+        }
+
+        public bool actualizarMovimiento(MovimientoEN movEN)
+        {
+            return MovDAO.actualizarMovimiento(movEN);
+        }
     }
 }

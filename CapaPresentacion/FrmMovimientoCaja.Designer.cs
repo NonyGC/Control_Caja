@@ -33,12 +33,16 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMovimientoCaja));
@@ -82,6 +86,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.MCCboCodigo = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.RbtModificar = new Telerik.WinControls.UI.RadButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.TxtNumMov = new Telerik.WinControls.UI.RadTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboDocumento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNumero)).BeginInit();
@@ -107,6 +114,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.MCCboCodigo.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MCCboCodigo.EditorControl.MasterTemplate)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RbtModificar)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtNumMov)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,6 +159,7 @@
             this.cboDocumento.Size = new System.Drawing.Size(319, 25);
             this.cboDocumento.TabIndex = 2;
             this.cboDocumento.ThemeName = "VisualStudio2012Light";
+            this.cboDocumento.Enter += new System.EventHandler(this.cboDocumento_Enter);
             // 
             // label8
             // 
@@ -285,6 +296,7 @@
             this.cboConcepto.Size = new System.Drawing.Size(318, 25);
             this.cboConcepto.TabIndex = 12;
             this.cboConcepto.ThemeName = "VisualStudio2012Light";
+            this.cboConcepto.Enter += new System.EventHandler(this.cboConcepto_Enter);
             // 
             // label2
             // 
@@ -352,63 +364,84 @@
             // 
             // 
             this.grvMovimiento.MasterTemplate.AllowAddNewRow = false;
-            gridViewTextBoxColumn1.FieldName = "Descripcion";
-            gridViewTextBoxColumn1.HeaderText = "Comprobante";
-            gridViewTextBoxColumn1.Name = "column1";
-            gridViewTextBoxColumn1.Width = 280;
-            gridViewTextBoxColumn2.FieldName = "Serie";
-            gridViewTextBoxColumn2.HeaderText = "Serie";
-            gridViewTextBoxColumn2.Name = "Serie";
-            gridViewTextBoxColumn2.Width = 80;
-            gridViewTextBoxColumn3.FieldName = "Numero";
-            gridViewTextBoxColumn3.HeaderText = "Numero";
-            gridViewTextBoxColumn3.Name = "Numero";
-            gridViewTextBoxColumn3.Width = 100;
-            gridViewTextBoxColumn4.FieldName = "TipoMovimiento";
-            gridViewTextBoxColumn4.HeaderText = "Movimiento";
-            gridViewTextBoxColumn4.Name = "Movimiento";
-            gridViewTextBoxColumn4.Width = 120;
-            gridViewTextBoxColumn5.FieldName = "Monto";
-            gridViewTextBoxColumn5.FormatString = "{0:C}";
-            gridViewTextBoxColumn5.HeaderText = "Monto";
-            gridViewTextBoxColumn5.Name = "Monto";
-            gridViewTextBoxColumn5.Width = 150;
+            gridViewTextBoxColumn1.FieldName = "ID";
+            gridViewTextBoxColumn1.HeaderText = "ID";
+            gridViewTextBoxColumn1.IsVisible = false;
+            gridViewTextBoxColumn1.Name = "ID";
+            gridViewTextBoxColumn2.FieldName = "IDDocumento";
+            gridViewTextBoxColumn2.HeaderText = "IDDocumento";
+            gridViewTextBoxColumn2.IsVisible = false;
+            gridViewTextBoxColumn2.Name = "IDDocumento";
+            gridViewTextBoxColumn3.FieldName = "Descripcion";
+            gridViewTextBoxColumn3.HeaderText = "Comprobante";
+            gridViewTextBoxColumn3.Name = "column1";
+            gridViewTextBoxColumn3.Width = 280;
+            gridViewTextBoxColumn4.FieldName = "Serie";
+            gridViewTextBoxColumn4.HeaderText = "Serie";
+            gridViewTextBoxColumn4.Name = "Serie";
+            gridViewTextBoxColumn4.Width = 80;
+            gridViewTextBoxColumn5.FieldName = "Numero";
+            gridViewTextBoxColumn5.HeaderText = "Numero";
+            gridViewTextBoxColumn5.Name = "Numero";
+            gridViewTextBoxColumn5.Width = 100;
+            gridViewTextBoxColumn6.FieldName = "TipoMovimiento";
+            gridViewTextBoxColumn6.HeaderText = "Movimiento";
+            gridViewTextBoxColumn6.Name = "Movimiento";
+            gridViewTextBoxColumn6.Width = 120;
+            gridViewTextBoxColumn7.FieldName = "Monto";
+            gridViewTextBoxColumn7.FormatString = "{0:C}";
+            gridViewTextBoxColumn7.HeaderText = "Monto";
+            gridViewTextBoxColumn7.Name = "Monto";
+            gridViewTextBoxColumn7.Width = 150;
+            gridViewTextBoxColumn8.FieldName = "Observacion";
+            gridViewTextBoxColumn8.HeaderText = "Observacion";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "Observacion";
+            gridViewTextBoxColumn9.FieldName = "Concepto";
+            gridViewTextBoxColumn9.HeaderText = "Concepto";
+            gridViewTextBoxColumn9.IsVisible = false;
+            gridViewTextBoxColumn9.Name = "Concepto";
             this.grvMovimiento.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5});
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9});
             this.grvMovimiento.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.grvMovimiento.Name = "grvMovimiento";
             this.grvMovimiento.ReadOnly = true;
             this.grvMovimiento.ShowGroupPanel = false;
             this.grvMovimiento.Size = new System.Drawing.Size(745, 183);
             this.grvMovimiento.TabIndex = 19;
-            this.grvMovimiento.Text = "radGridView1";
             this.grvMovimiento.ThemeName = "VisualStudio2012Light";
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(655, 224);
+            this.BtnCancelar.Location = new System.Drawing.Point(420, 224);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(100, 24);
             this.BtnCancelar.TabIndex = 16;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.ThemeName = "VisualStudio2012Light";
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(548, 224);
+            this.BtnEliminar.Location = new System.Drawing.Point(653, 224);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(100, 24);
             this.BtnEliminar.TabIndex = 17;
             this.BtnEliminar.Text = "ELIMINAR";
             this.BtnEliminar.ThemeName = "VisualStudio2012Light";
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(442, 224);
+            this.BtnAgregar.Location = new System.Drawing.Point(314, 224);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(100, 24);
             this.BtnAgregar.TabIndex = 18;
@@ -420,7 +453,7 @@
             // 
             this.TxtSaldoInicial.Enabled = false;
             this.TxtSaldoInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSaldoInicial.Location = new System.Drawing.Point(458, 469);
+            this.TxtSaldoInicial.Location = new System.Drawing.Point(12, 32);
             this.TxtSaldoInicial.MinimumSize = new System.Drawing.Size(0, 24);
             this.TxtSaldoInicial.Name = "TxtSaldoInicial";
             this.TxtSaldoInicial.ReadOnly = true;
@@ -437,7 +470,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(458, 451);
+            this.label5.Location = new System.Drawing.Point(12, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 15);
             this.label5.TabIndex = 1;
@@ -446,7 +479,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(581, 448);
+            this.label9.Location = new System.Drawing.Point(135, 11);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 18);
             this.label9.TabIndex = 1;
@@ -456,7 +489,7 @@
             // TxtTotIngreso
             // 
             this.TxtTotIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotIngreso.Location = new System.Drawing.Point(583, 469);
+            this.TxtTotIngreso.Location = new System.Drawing.Point(137, 32);
             this.TxtTotIngreso.MinimumSize = new System.Drawing.Size(0, 24);
             this.TxtTotIngreso.Name = "TxtTotIngreso";
             this.TxtTotIngreso.ReadOnly = true;
@@ -472,7 +505,7 @@
             // TxtTotEgreso
             // 
             this.TxtTotEgreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotEgreso.Location = new System.Drawing.Point(667, 469);
+            this.TxtTotEgreso.Location = new System.Drawing.Point(221, 32);
             this.TxtTotEgreso.MinimumSize = new System.Drawing.Size(0, 24);
             this.TxtTotEgreso.Name = "TxtTotEgreso";
             this.TxtTotEgreso.ReadOnly = true;
@@ -488,7 +521,7 @@
             // TxtSaldoFinal
             // 
             this.TxtSaldoFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSaldoFinal.Location = new System.Drawing.Point(458, 513);
+            this.TxtSaldoFinal.Location = new System.Drawing.Point(12, 76);
             this.TxtSaldoFinal.MinimumSize = new System.Drawing.Size(0, 24);
             this.TxtSaldoFinal.Name = "TxtSaldoFinal";
             this.TxtSaldoFinal.ReadOnly = true;
@@ -505,7 +538,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(458, 495);
+            this.label10.Location = new System.Drawing.Point(12, 58);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 15);
             this.label10.TabIndex = 1;
@@ -566,7 +599,7 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(665, 448);
+            this.label12.Location = new System.Drawing.Point(219, 11);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(82, 18);
             this.label12.TabIndex = 28;
@@ -602,43 +635,44 @@
             this.MCCboCodigo.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.MCCboCodigo.EditorControl.MasterTemplate.AllowCellContextMenu = false;
             this.MCCboCodigo.EditorControl.MasterTemplate.AllowColumnChooser = false;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "ID";
-            gridViewTextBoxColumn6.HeaderText = "Codigo";
-            gridViewTextBoxColumn6.Name = "Codigo";
-            gridViewTextBoxColumn6.ReadOnly = true;
-            gridViewTextBoxColumn6.Width = 59;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "Fecha";
-            gridViewTextBoxColumn7.HeaderText = "Fecha";
-            gridViewTextBoxColumn7.Name = "Fecha";
-            gridViewTextBoxColumn7.ReadOnly = true;
-            gridViewTextBoxColumn7.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
-            gridViewTextBoxColumn7.Width = 81;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "Importe";
-            gridViewTextBoxColumn8.HeaderText = "Importe";
-            gridViewTextBoxColumn8.IsVisible = false;
-            gridViewTextBoxColumn8.Name = "Importe";
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "Estado";
-            gridViewTextBoxColumn9.HeaderText = "Estado";
-            gridViewTextBoxColumn9.Name = "Estado";
             gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "CodigoFecha";
-            gridViewTextBoxColumn10.HeaderText = "CodigoFecha";
-            gridViewTextBoxColumn10.IsVisible = false;
-            gridViewTextBoxColumn10.Name = "CodigoFecha";
+            gridViewTextBoxColumn10.FieldName = "ID";
+            gridViewTextBoxColumn10.HeaderText = "Codigo";
+            gridViewTextBoxColumn10.Name = "Codigo";
+            gridViewTextBoxColumn10.ReadOnly = true;
+            gridViewTextBoxColumn10.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn10.Width = 59;
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
+            gridViewTextBoxColumn11.FieldName = "Fecha";
+            gridViewTextBoxColumn11.HeaderText = "Fecha";
+            gridViewTextBoxColumn11.Name = "Fecha";
+            gridViewTextBoxColumn11.ReadOnly = true;
+            gridViewTextBoxColumn11.Width = 81;
+            gridViewTextBoxColumn12.EnableExpressionEditor = false;
+            gridViewTextBoxColumn12.FieldName = "Importe";
+            gridViewTextBoxColumn12.HeaderText = "Importe";
+            gridViewTextBoxColumn12.IsVisible = false;
+            gridViewTextBoxColumn12.Name = "Importe";
+            gridViewTextBoxColumn13.EnableExpressionEditor = false;
+            gridViewTextBoxColumn13.FieldName = "Estado";
+            gridViewTextBoxColumn13.HeaderText = "Estado";
+            gridViewTextBoxColumn13.IsVisible = false;
+            gridViewTextBoxColumn13.Name = "Estado";
+            gridViewTextBoxColumn14.EnableExpressionEditor = false;
+            gridViewTextBoxColumn14.FieldName = "CodigoFecha";
+            gridViewTextBoxColumn14.HeaderText = "CodigoFecha";
+            gridViewTextBoxColumn14.IsVisible = false;
+            gridViewTextBoxColumn14.Name = "CodigoFecha";
             this.MCCboCodigo.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10});
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12,
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14});
             this.MCCboCodigo.EditorControl.MasterTemplate.EnableGrouping = false;
             this.MCCboCodigo.EditorControl.MasterTemplate.ShowFilteringRow = false;
             sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
-            sortDescriptor1.PropertyName = "Fecha";
+            sortDescriptor1.PropertyName = "Codigo";
             this.MCCboCodigo.EditorControl.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
             sortDescriptor1});
             this.MCCboCodigo.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition2;
@@ -669,29 +703,58 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "CAJA";
             // 
+            // RbtModificar
+            // 
+            this.RbtModificar.Location = new System.Drawing.Point(547, 224);
+            this.RbtModificar.Name = "RbtModificar";
+            this.RbtModificar.Size = new System.Drawing.Size(100, 24);
+            this.RbtModificar.TabIndex = 34;
+            this.RbtModificar.Text = "MODIFICAR";
+            this.RbtModificar.ThemeName = "VisualStudio2012Light";
+            this.RbtModificar.Click += new System.EventHandler(this.RbtModificar_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.TxtSaldoInicial);
+            this.groupBox5.Controls.Add(this.TxtTotIngreso);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.TxtSaldoFinal);
+            this.groupBox5.Controls.Add(this.TxtTotEgreso);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Location = new System.Drawing.Point(406, 435);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(352, 106);
+            this.groupBox5.TabIndex = 35;
+            this.groupBox5.TabStop = false;
+            // 
+            // TxtNumMov
+            // 
+            this.TxtNumMov.Location = new System.Drawing.Point(15, 228);
+            this.TxtNumMov.Name = "TxtNumMov";
+            this.TxtNumMov.Size = new System.Drawing.Size(10, 20);
+            this.TxtNumMov.TabIndex = 36;
+            this.TxtNumMov.Visible = false;
+            // 
             // FrmMovimientoCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 546);
+            this.Controls.Add(this.TxtNumMov);
+            this.Controls.Add(this.grvMovimiento);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.RbtModificar);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblEmpresa);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.grvMovimiento);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.BtnCerrarCaja);
             this.Controls.Add(this.BtnAgregar);
-            this.Controls.Add(this.TxtTotEgreso);
-            this.Controls.Add(this.TxtSaldoFinal);
-            this.Controls.Add(this.TxtTotIngreso);
-            this.Controls.Add(this.TxtSaldoInicial);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -735,12 +798,87 @@
             ((System.ComponentModel.ISupportInitialize)(this.MCCboCodigo)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RbtModificar)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtNumMov)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+        private void InitializeComponentRadGridView()
+        {
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+
+            //Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            // 
+            // grvMovimiento
+            // 
+            this.grvMovimiento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grvMovimiento.Location = new System.Drawing.Point(12, 254);
+            // 
+            // 
+            // 
+            this.grvMovimiento.MasterTemplate.AllowAddNewRow = false;
+            gridViewTextBoxColumn1.FieldName = "IDDocumento";
+            gridViewTextBoxColumn1.HeaderText = "IDDocumento";
+            gridViewTextBoxColumn1.IsVisible = false;
+            gridViewTextBoxColumn1.Name = "IDDocumento";
+            gridViewTextBoxColumn2.FieldName = "Descripcion";
+            gridViewTextBoxColumn2.HeaderText = "Comprobante";
+            gridViewTextBoxColumn2.Name = "column1";
+            gridViewTextBoxColumn2.Width = 280;
+            gridViewTextBoxColumn3.FieldName = "Serie";
+            gridViewTextBoxColumn3.HeaderText = "Serie";
+            gridViewTextBoxColumn3.Name = "Serie";
+            gridViewTextBoxColumn3.Width = 80;
+            gridViewTextBoxColumn4.FieldName = "Numero";
+            gridViewTextBoxColumn4.HeaderText = "Numero";
+            gridViewTextBoxColumn4.Name = "Numero";
+            gridViewTextBoxColumn4.Width = 100;
+            gridViewTextBoxColumn5.FieldName = "TipoMovimiento";
+            gridViewTextBoxColumn5.HeaderText = "Movimiento";
+            gridViewTextBoxColumn5.Name = "Movimiento";
+            gridViewTextBoxColumn5.Width = 120;
+            gridViewTextBoxColumn6.FieldName = "Monto";
+            gridViewTextBoxColumn6.FormatString = "{0:C}";
+            gridViewTextBoxColumn6.HeaderText = "Monto";
+            gridViewTextBoxColumn6.Name = "Monto";
+            gridViewTextBoxColumn6.Width = 150;
+            gridViewTextBoxColumn7.FieldName = "Observacion";
+            gridViewTextBoxColumn7.HeaderText = "Observacion";
+            gridViewTextBoxColumn7.IsVisible = false;
+            gridViewTextBoxColumn7.Name = "Observacion";
+            gridViewTextBoxColumn8.FieldName = "Concepto";
+            gridViewTextBoxColumn8.HeaderText = "Concepto";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "Concepto";
+            //this.grvMovimiento.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            //gridViewTextBoxColumn1,
+            //gridViewTextBoxColumn2,
+            //gridViewTextBoxColumn3,
+            //gridViewTextBoxColumn4,
+            //gridViewTextBoxColumn5,
+            //gridViewTextBoxColumn6,
+            //gridViewTextBoxColumn7,
+            //gridViewTextBoxColumn8});
+            //this.grvMovimiento.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.grvMovimiento.Name = "grvMovimiento";
+            this.grvMovimiento.ReadOnly = true;
+            this.grvMovimiento.ShowGroupPanel = false;
+            this.grvMovimiento.Size = new System.Drawing.Size(745, 183);
+            this.grvMovimiento.TabIndex = 19;
+            this.grvMovimiento.ThemeName = "VisualStudio2012Light";
+        }
         #endregion
 
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
@@ -783,5 +921,8 @@
         private System.Windows.Forms.Label label3;
         private Telerik.WinControls.UI.RadMultiColumnComboBox MCCboCodigo;
         private System.Windows.Forms.GroupBox groupBox4;
+        private Telerik.WinControls.UI.RadButton RbtModificar;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private Telerik.WinControls.UI.RadTextBox TxtNumMov;
     }
 }

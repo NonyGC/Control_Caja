@@ -111,17 +111,17 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(443, 203);
+            this.btnEliminar.Location = new System.Drawing.Point(460, 203);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(79, 24);
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.ThemeName = "VisualStudio2012Light";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(443, 143);
+            this.btnModificar.Location = new System.Drawing.Point(460, 143);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(79, 24);
             this.btnModificar.TabIndex = 15;
@@ -131,7 +131,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(443, 113);
+            this.btnGuardar.Location = new System.Drawing.Point(460, 113);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(79, 24);
             this.btnGuardar.TabIndex = 16;
@@ -160,13 +160,13 @@
             this.grvConcepto.Name = "grvConcepto";
             this.grvConcepto.ReadOnly = true;
             this.grvConcepto.ShowGroupPanel = false;
-            this.grvConcepto.Size = new System.Drawing.Size(398, 150);
+            this.grvConcepto.Size = new System.Drawing.Size(415, 150);
             this.grvConcepto.TabIndex = 17;
             this.grvConcepto.ThemeName = "VisualStudio2012Light";
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(443, 173);
+            this.radButton1.Location = new System.Drawing.Point(460, 173);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(79, 24);
             this.radButton1.TabIndex = 15;

@@ -11,6 +11,7 @@ namespace Capa_Entidad
         public string Concepto { get; set; }
         public string IDCaja { get; set; }
         public string IDDocumento { get; set; }
+        public string IdMov { get; set; }
         public string Monto { get; set; }
         public string Numero { get; set; }
         public string Observacion { get; set; }

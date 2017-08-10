@@ -32,12 +32,15 @@ namespace CapaPresentacion
 
             lblFecha.Text = FechaActual.ToShortDateString();
             dtpFecha.Value = FechaActual;
-
+            //cargarCboDocumento();
+            dropDownListLimitAutocomplete();
+        }
+        private void cargarCboDocumento()
+        {
             cboDocumento.DataSource = DocBL.ObtenerTipoDocumentoBL();
             cboDocumento.DisplayMember = "Descripcion";
             cboDocumento.ValueMember = "Id";
             cboDocumento.SelectedIndex = -1;
-            dropDownListLimitAutocomplete();
         }
         private void dropDownListLimitAutocomplete()
         {
@@ -173,7 +176,30 @@ namespace CapaPresentacion
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            var codigo = dtgSaldoInicial.CurrentRow.Cells["Codigo"].Value.ToString();
+            if (string.IsNullOrEmpty(codigo))
+                return;
+            if (RadMessageBox.Show("¿REALMENTE DESEA ELIMINAR?", "MBCORP", MessageBoxButtons.YesNo, RadMessageIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                CajaIniEN.ID = codigo;
+                bool EstadoEjecucion = CajaIniBL.EliminarCajaInicio(CajaIniEN,EmpresaEN.idEmpresa);
+                if (EstadoEjecucion)
+                {
+                    RadMessageBox.Show("SE ELIMINO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
+                    cargarGrillaCajaInicio();
+                }
+            }
 
+        }
+
+        private void cboDocumento_Enter(object sender, EventArgs e)
+        {
+            cargarCboDocumento();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

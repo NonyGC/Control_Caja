@@ -25,9 +25,29 @@ namespace Capa_Datos
             try
             {
                 int i;
-                SqlCommand cmd = CommandProcedure("USP_Documento_REGISTRAR");
-                string[] env = { conEN.Descripcion };
-                cmd = Parameters(cmd, env);
+                SqlCommand cmd = CommandText("INSERT INTO [dbo].[Concepto] ([Descripcion]) VALUES (@Descripcion)");
+                cmd.Parameters.AddWithValue("@Descripcion",conEN.Descripcion);
+                i = cmd.ExecuteNonQuery();
+                return i > 0 ? true : false;
+            }
+            catch (SqlException ex)
+            {
+                RadMessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                CloseDB();
+            }
+        }
+
+        public bool EliminarDocumento(ConceptoEN conEN)
+        {
+            try
+            {
+                int i;
+                SqlCommand cmd = CommandText("DELETE FROM [dbo].[Concepto] WHERE [ID] = @ID");
+                cmd.Parameters.AddWithValue("@ID", conEN.ID);
                 i = cmd.ExecuteNonQuery();
                 return i > 0 ? true : false;
             }
@@ -47,9 +67,9 @@ namespace Capa_Datos
             try
             {
                 int i;
-                SqlCommand cmd = CommandProcedure("USP_Documento_ACTUALIZAR");
-                string[] env = { conEN.ID, conEN.Descripcion };
-                cmd = Parameters(cmd, env);
+                SqlCommand cmd = CommandText("UPDATE [dbo].[Concepto] SET [Descripcion] = @Descripcion WHERE [ID]=@ID");
+                cmd.Parameters.AddWithValue("@ID", conEN.ID);
+                cmd.Parameters.AddWithValue("@Descripcion", conEN.Descripcion);
                 i = cmd.ExecuteNonQuery();
                 return i > 0 ? true : false;
             }

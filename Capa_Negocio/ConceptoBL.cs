@@ -27,5 +27,10 @@ namespace Capa_Negocio
         {
             return ConDAO.ActualizarConcepto(conEN); 
         }
+
+        public bool EliminarDocumento(ConceptoEN conEN)
+        {
+            return ConDAO.EliminarDocumento(conEN); 
+        }
     }
 }

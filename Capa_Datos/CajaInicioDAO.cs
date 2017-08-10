@@ -10,16 +10,9 @@ using Telerik.WinControls;
 
 namespace Capa_Datos
 {
-    public class CajaInicioDAO:BaseDAO
+    public class CajaInicioDAO : BaseDAO
     {
-        public string ObtenerCodigo()
-        {
-            string Codigo; 
-            SqlCommand cmd = CommandProcedure("USP_CajaInicio_CODIGOAUTOGENERADO");
-            Codigo= cmd.ExecuteScalar().ToString();
-            // return dtConcepto; 
-            return Codigo;
-        }
+
 
         public bool GuardarNuevaCajaInicio(CajaInicioEN cajaIniEN)
         {
@@ -28,8 +21,44 @@ namespace Capa_Datos
                 int i;
                 var _ = cajaIniEN;
                 SqlCommand cmd = CommandProcedure("USP_CajaInicio_REGISTRAR");
-                object[] env = { _.ID,_.Fecha,_.IDEmpresa,_.IDDocumento,_.Serie,_.Numero,_.Importe,_.Estado };
+                object[] env = { _.ID, _.Fecha, _.IDEmpresa, _.IDDocumento, _.Serie, _.Numero, _.Importe, _.Estado };
                 cmd = Parameters(cmd, env);
+                i = cmd.ExecuteNonQuery();
+                return i > 0 ? true : false;
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627)
+                {
+                    RadMessageBox.Show("Inicio de Caja mas de una vez por dia NO PERMITIDO","",System.Windows.Forms.MessageBoxButtons.OK,RadMessageIcon.Error);
+                }
+                //else
+                {
+                    RadMessageBox.Show(ex.Message);
+                }
+                return false;
+            }
+            finally
+            {
+                CloseDB();
+            }
+        }
+        public string ObtenerCodigo()
+        {
+            string Codigo;
+            SqlCommand cmd = CommandProcedure("USP_CajaInicio_CODIGOAUTOGENERADO");
+            Codigo = cmd.ExecuteScalar().ToString();
+            return Codigo;
+        }
+
+        public bool EliminarCajaInicio(CajaInicioEN cajaIniEN, string idEmpresa)
+        {
+            try
+            {
+                int i = 0;
+                SqlCommand cmd = CommandProcedure("USP_CajaCierre_ELIMINAR");
+                cmd.Parameters.AddWithValue("@IDCAJA", cajaIniEN.ID);
+                cmd.Parameters.AddWithValue("@IDEmpresa", idEmpresa);
                 i = cmd.ExecuteNonQuery();
                 return i > 0 ? true : false;
             }
@@ -51,7 +80,7 @@ namespace Capa_Datos
                 int i;
                 var _ = cajaIniEN;
                 SqlCommand cmd = CommandProcedure("USP_CajaInicio_ACTUALIZAR");
-                object[] env = { _.ID, _.Fecha, _.IDDocumento, _.Serie, _.Numero, _.Importe};
+                object[] env = { _.ID, _.Fecha, _.IDDocumento, _.Serie, _.Numero, _.Importe };
                 cmd = Parameters(cmd, env);
                 i = cmd.ExecuteNonQuery();
                 return i > 0 ? true : false;
@@ -71,10 +100,10 @@ namespace Capa_Datos
         {
             DataTable dtCajaIncio = new DataTable();
             SqlCommand cmd = CommandProcedure("USP_CajaInicio_LISTAR");
-            cmd.Parameters.AddWithValue("@IDEmpresa",idEmpresa);
+            cmd.Parameters.AddWithValue("@IDEmpresa", idEmpresa);
             dtCajaIncio = GetDataTable(cmd);
             return dtCajaIncio;
-           
+
         }
     }
 }
