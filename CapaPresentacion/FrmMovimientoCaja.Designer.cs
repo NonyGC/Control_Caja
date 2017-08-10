@@ -126,7 +126,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(113, 0);
+            this.label1.Location = new System.Drawing.Point(120, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(560, 28);
             this.label1.TabIndex = 1;
@@ -146,7 +146,7 @@
             this.groupBox1.Location = new System.Drawing.Point(13, 142);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(518, 75);
-            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " COMPROBANTE";
             // 
@@ -157,7 +157,7 @@
             this.cboDocumento.Location = new System.Drawing.Point(100, 16);
             this.cboDocumento.Name = "cboDocumento";
             this.cboDocumento.Size = new System.Drawing.Size(319, 25);
-            this.cboDocumento.TabIndex = 2;
+            this.cboDocumento.TabIndex = 7;
             this.cboDocumento.ThemeName = "VisualStudio2012Light";
             this.cboDocumento.Enter += new System.EventHandler(this.cboDocumento_Enter);
             // 
@@ -193,7 +193,7 @@
             // 
             this.TxtNumero.RootElement.MinSize = new System.Drawing.Size(0, 24);
             this.TxtNumero.Size = new System.Drawing.Size(105, 24);
-            this.TxtNumero.TabIndex = 2;
+            this.TxtNumero.TabIndex = 9;
             this.TxtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtNumero.ThemeName = "VisualStudio2012Light";
             this.TxtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_KeyPress);
@@ -210,7 +210,7 @@
             // 
             this.TxtSerie.RootElement.MinSize = new System.Drawing.Size(0, 24);
             this.TxtSerie.Size = new System.Drawing.Size(61, 24);
-            this.TxtSerie.TabIndex = 2;
+            this.TxtSerie.TabIndex = 8;
             this.TxtSerie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtSerie.ThemeName = "VisualStudio2012Light";
             this.TxtSerie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_KeyPress);
@@ -243,7 +243,7 @@
             this.groupBox2.Location = new System.Drawing.Point(537, 143);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(221, 75);
-            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MOVIMIENTO";
             // 
@@ -253,7 +253,7 @@
             this.RbtEgreso.Location = new System.Drawing.Point(116, 19);
             this.RbtEgreso.Name = "RbtEgreso";
             this.RbtEgreso.Size = new System.Drawing.Size(67, 17);
-            this.RbtEgreso.TabIndex = 0;
+            this.RbtEgreso.TabIndex = 12;
             this.RbtEgreso.Text = "EGRESO";
             this.RbtEgreso.UseVisualStyleBackColor = true;
             // 
@@ -264,7 +264,7 @@
             this.RbtIngreso.Location = new System.Drawing.Point(38, 19);
             this.RbtIngreso.Name = "RbtIngreso";
             this.RbtIngreso.Size = new System.Drawing.Size(72, 17);
-            this.RbtIngreso.TabIndex = 0;
+            this.RbtIngreso.TabIndex = 11;
             this.RbtIngreso.TabStop = true;
             this.RbtIngreso.Text = "INGRESO";
             this.RbtIngreso.UseVisualStyleBackColor = true;
@@ -282,7 +282,7 @@
             // 
             this.TxtMonto.RootElement.MinSize = new System.Drawing.Size(0, 24);
             this.TxtMonto.Size = new System.Drawing.Size(145, 24);
-            this.TxtMonto.TabIndex = 2;
+            this.TxtMonto.TabIndex = 13;
             this.TxtMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtMonto.ThemeName = "VisualStudio2012Light";
             this.TxtMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMonto_KeyPress);
@@ -294,7 +294,7 @@
             this.cboConcepto.Location = new System.Drawing.Point(97, 14);
             this.cboConcepto.Name = "cboConcepto";
             this.cboConcepto.Size = new System.Drawing.Size(318, 25);
-            this.cboConcepto.TabIndex = 12;
+            this.cboConcepto.TabIndex = 4;
             this.cboConcepto.ThemeName = "VisualStudio2012Light";
             this.cboConcepto.Enter += new System.EventHandler(this.cboConcepto_Enter);
             // 
@@ -328,7 +328,7 @@
             this.groupBox3.Location = new System.Drawing.Point(246, 70);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(512, 72);
-            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DATOS GENERALES";
             // 
@@ -343,7 +343,7 @@
             // 
             this.TxtObservacion.RootElement.MinSize = new System.Drawing.Size(0, 24);
             this.TxtObservacion.Size = new System.Drawing.Size(400, 24);
-            this.TxtObservacion.TabIndex = 2;
+            this.TxtObservacion.TabIndex = 5;
             this.TxtObservacion.ThemeName = "VisualStudio2012Light";
             // 
             // radButton5
@@ -444,7 +444,7 @@
             this.BtnAgregar.Location = new System.Drawing.Point(314, 224);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(100, 24);
-            this.BtnAgregar.TabIndex = 18;
+            this.BtnAgregar.TabIndex = 14;
             this.BtnAgregar.Text = "AGREGAR";
             this.BtnAgregar.ThemeName = "VisualStudio2012Light";
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
@@ -614,7 +614,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 15);
             this.label3.TabIndex = 31;
-            this.label3.Text = "Código-Fecha [Caja Inicio] |";
+            this.label3.Text = "Fecha-Código [Caja Inicio] |";
             // 
             // MCCboCodigo
             // 
@@ -636,18 +636,18 @@
             this.MCCboCodigo.EditorControl.MasterTemplate.AllowCellContextMenu = false;
             this.MCCboCodigo.EditorControl.MasterTemplate.AllowColumnChooser = false;
             gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "ID";
-            gridViewTextBoxColumn10.HeaderText = "Codigo";
-            gridViewTextBoxColumn10.Name = "Codigo";
+            gridViewTextBoxColumn10.FieldName = "Fecha";
+            gridViewTextBoxColumn10.HeaderText = "Fecha";
+            gridViewTextBoxColumn10.Name = "Fecha";
             gridViewTextBoxColumn10.ReadOnly = true;
             gridViewTextBoxColumn10.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
-            gridViewTextBoxColumn10.Width = 59;
+            gridViewTextBoxColumn10.Width = 81;
             gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.FieldName = "Fecha";
-            gridViewTextBoxColumn11.HeaderText = "Fecha";
-            gridViewTextBoxColumn11.Name = "Fecha";
+            gridViewTextBoxColumn11.FieldName = "ID";
+            gridViewTextBoxColumn11.HeaderText = "Codigo";
+            gridViewTextBoxColumn11.Name = "Codigo";
             gridViewTextBoxColumn11.ReadOnly = true;
-            gridViewTextBoxColumn11.Width = 81;
+            gridViewTextBoxColumn11.Width = 59;
             gridViewTextBoxColumn12.EnableExpressionEditor = false;
             gridViewTextBoxColumn12.FieldName = "Importe";
             gridViewTextBoxColumn12.HeaderText = "Importe";
@@ -672,7 +672,7 @@
             this.MCCboCodigo.EditorControl.MasterTemplate.EnableGrouping = false;
             this.MCCboCodigo.EditorControl.MasterTemplate.ShowFilteringRow = false;
             sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
-            sortDescriptor1.PropertyName = "Codigo";
+            sortDescriptor1.PropertyName = "Fecha";
             this.MCCboCodigo.EditorControl.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
             sortDescriptor1});
             this.MCCboCodigo.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition2;
@@ -685,7 +685,7 @@
             this.MCCboCodigo.Location = new System.Drawing.Point(15, 37);
             this.MCCboCodigo.Name = "MCCboCodigo";
             this.MCCboCodigo.Size = new System.Drawing.Size(174, 24);
-            this.MCCboCodigo.TabIndex = 32;
+            this.MCCboCodigo.TabIndex = 2;
             this.MCCboCodigo.TabStop = false;
             this.MCCboCodigo.ThemeName = "VisualStudio2012Light";
             this.MCCboCodigo.SelectedIndexChanged += new System.EventHandler(this.MCCboCodigo_SelectedIndexChanged);
@@ -699,7 +699,7 @@
             this.groupBox4.Location = new System.Drawing.Point(15, 70);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(215, 72);
-            this.groupBox4.TabIndex = 33;
+            this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "CAJA";
             // 

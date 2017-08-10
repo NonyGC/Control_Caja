@@ -53,6 +53,28 @@ namespace Capa_Datos
             }
         }
 
+        public bool EliminarMovimento(MovimientoEN movEN)
+        {
+            try
+            {
+                int i;
+                SqlCommand cmd = CommandProcedure("USP_Movimiento_ELIMINAR");
+                cmd.Parameters.AddWithValue("@IdMov", movEN.IdMov);
+                cmd.Parameters.AddWithValue("@IDCaja", movEN.IDCaja);
+                i = cmd.ExecuteNonQuery();
+                return i > 0 ? true : false;
+            }
+            catch (SqlException ex)
+            {
+                RadMessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                CloseDB();
+            }
+        }
+
         public bool actualizarMovimiento(MovimientoEN movEN)
         {
             try

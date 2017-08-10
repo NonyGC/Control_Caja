@@ -46,5 +46,10 @@ namespace Capa_Negocio
         {
             return MovDAO.actualizarMovimiento(movEN);
         }
+
+        public bool EliminarMovimento(MovimientoEN movEN)
+        {
+            return MovDAO.EliminarMovimento(movEN);
+        } 
     }
 }

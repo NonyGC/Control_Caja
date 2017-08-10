@@ -231,7 +231,7 @@ namespace CapaPresentacion
 
             bool EstadoEjecucion = false;
             {
-                
+
                 EstadoEjecucion = MovBL.AgregarNuevoCajaCierre(CajCEN);
                 if (EstadoEjecucion)
                 {
@@ -275,8 +275,21 @@ namespace CapaPresentacion
                 RadMessageBox.Show("CAJA ESTA CERRADO", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error);
                 return;
             }
-            //var grvCurrent = grvMovimiento.CurrentRow;
-            //MovEN.IDCaja = grvCurrent.Cells[""].Value.ToString();
+
+            if (RadMessageBox.Show("¿REALMENTE DESEA ELIMINAR?", "MBCORP", MessageBoxButtons.YesNo, RadMessageIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                var grvCurrent = grvMovimiento.CurrentRow;
+                MovEN.IdMov = grvCurrent.Cells["ID"].Value.ToString();
+                MovEN.IDCaja = MCCboCodigo.SelectedValue.ToString();
+
+                bool EstadoEjecucion = MovBL.EliminarMovimento(MovEN);
+                if (EstadoEjecucion)
+                {
+                    RadMessageBox.Show("SE ELIMINO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
+                    cargarGrillaMovimiento();
+                }
+            }
+
         }
 
         private void cboConcepto_Enter(object sender, EventArgs e)

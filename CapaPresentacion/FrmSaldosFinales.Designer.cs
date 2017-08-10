@@ -153,7 +153,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(81, 0);
+            this.label1.Location = new System.Drawing.Point(70, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(536, 28);
             this.label1.TabIndex = 28;
