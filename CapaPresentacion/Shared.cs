@@ -15,6 +15,7 @@ namespace CapaPresentacion
             {
                 e.Handled = true;
             }
+
             if (e.KeyChar == '.' && Texto.IndexOf('.') > -1)
             {
                 e.Handled = true;
@@ -28,8 +29,8 @@ namespace CapaPresentacion
                 }
 
             }
-
         }
+
         public static void validarSoloNumeros(KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))

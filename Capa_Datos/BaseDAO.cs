@@ -23,7 +23,7 @@ namespace Capa_Datos
                 {
                     conexionValue.Close();
                 }
-                conexionValue.ConnectionString = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+                conexionValue.ConnectionString = ConfigurationManager.ConnectionStrings["CapaPresentacion.Properties.Settings.Conn2"].ConnectionString;
                 conexionValue.Open();
             }
             catch (Exception ex)
@@ -85,6 +85,15 @@ namespace Capa_Datos
             CloseDB();
             return dt;
         }
+        //protected DataSet GetDataTable(SqlCommand cmd, string TableName)
+        //{
+        //    DataSet dt = new DataSet();
+        //    SqlDataAdapter da = new SqlDataAdapter();
+        //    da.SelectCommand = cmd;
+        //    da.Fill(dt, TableName);
+        //    CloseDB();
+        //    return dt;
+        //}
 
         protected void CloseDB()
         {

@@ -312,7 +312,7 @@ namespace CapaPresentacion
         {
             cboConcepto.DataSource = ConBL.ObtenerConceptoBL();
             cboConcepto.DisplayMember = "Descripcion";
-            cboConcepto.ValueMember = "Id";
+            cboConcepto.ValueMember = "ID";
             cboConcepto.SelectedIndex = -1;
         }
         private void RbtModificar_Click(object sender, EventArgs e)
@@ -369,10 +369,20 @@ namespace CapaPresentacion
             InitializeComponentRadGridView();
         }
 
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            if (MCCboCodigo.SelectedValue == null)
+                return;
+            var IDCaja= MCCboCodigo.SelectedValue.ToString();
+            FrmReporteMovimiento frm = new FrmReporteMovimiento(IDCaja);
+            frm.Show();
+            //frm.Dispose();
+        }
+
         private void AsignarValorMovimientoEN()
         {
             MovEN.IDCaja = MCCboCodigo.SelectedValue.ToString();
-            MovEN.Concepto = cboDocumento.SelectedValue.ToString();
+            MovEN.Concepto = cboConcepto.SelectedValue.ToString();
             MovEN.Observacion = TxtObservacion.Text;
             MovEN.IDDocumento = cboDocumento.SelectedValue.ToString();
             MovEN.Serie = TxtSerie.Text;

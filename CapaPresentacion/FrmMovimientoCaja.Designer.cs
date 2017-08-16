@@ -89,6 +89,7 @@
             this.RbtModificar = new Telerik.WinControls.UI.RadButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.TxtNumMov = new Telerik.WinControls.UI.RadTextBox();
+            this.btnReporte = new Telerik.WinControls.UI.RadButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboDocumento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNumero)).BeginInit();
@@ -117,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RbtModificar)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNumMov)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -737,11 +739,22 @@
             this.TxtNumMov.TabIndex = 36;
             this.TxtNumMov.Visible = false;
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(30, 224);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(177, 24);
+            this.btnReporte.TabIndex = 37;
+            this.btnReporte.Text = "REPORTE";
+            this.btnReporte.ThemeName = "VisualStudio2012Light";
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // FrmMovimientoCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 546);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.TxtNumMov);
             this.Controls.Add(this.grvMovimiento);
             this.Controls.Add(this.groupBox5);
@@ -802,6 +815,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNumMov)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -924,5 +938,6 @@
         private Telerik.WinControls.UI.RadButton RbtModificar;
         private System.Windows.Forms.GroupBox groupBox5;
         private Telerik.WinControls.UI.RadTextBox TxtNumMov;
+        private Telerik.WinControls.UI.RadButton btnReporte;
     }
 }

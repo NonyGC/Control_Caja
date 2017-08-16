@@ -40,9 +40,9 @@ namespace CapaPresentacion.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MBOSISTEMAS-PC\\SQLEXPRESS;Initial Catalog=DBCAJACHICA;Integrated Secu" +
             "rity=True")]
-        public string DBCAJACHICAConnectionString {
+        public string Conn2 {
             get {
-                return ((string)(this["DBCAJACHICAConnectionString"]));
+                return ((string)(this["Conn2"]));
             }
         }
     }

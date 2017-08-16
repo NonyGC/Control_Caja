@@ -53,6 +53,16 @@ namespace Capa_Datos
             }
         }
 
+
+        public DataTable cargarDatosDeCabeceraReporte(string iDCaja)
+        {
+            DataTable dtCabecera = new DataTable();
+            SqlCommand cmd = CommandProcedure("USP_Movimiento_REPORTE_CABECERA");
+            cmd.Parameters.AddWithValue("@IDCaja", iDCaja);
+            dtCabecera = GetDataTable(cmd);
+            return dtCabecera;
+        } 
+
         public bool EliminarMovimento(MovimientoEN movEN)
         {
             try

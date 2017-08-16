@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Capa_Entidad;
-
 namespace Capa_Negocio
 {
     public class MovimientoBL
@@ -37,6 +36,7 @@ namespace Capa_Negocio
             return MovDAO.AgregarNuevoCajaCierre(cajCEN);
         }
 
+
         public bool ActualizarEtadoCaja(string idCajaInicio)
         {
             return MovDAO.ActualizarEtadoCaja(idCajaInicio);
@@ -45,6 +45,11 @@ namespace Capa_Negocio
         public bool actualizarMovimiento(MovimientoEN movEN)
         {
             return MovDAO.actualizarMovimiento(movEN);
+        }
+
+        public DataTable cargarDatosDeCabecera_Reporte(string iDCaja)
+        {
+            return MovDAO.cargarDatosDeCabeceraReporte(iDCaja);
         }
 
         public bool EliminarMovimento(MovimientoEN movEN)

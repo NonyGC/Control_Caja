@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class Reporte
+    partial class FrmReporteMovimiento
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.CrvMovimiento = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // CrvMovimiento
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(35, 87);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(802, 285);
-            this.reportViewer1.TabIndex = 0;
+            this.CrvMovimiento.ActiveViewIndex = -1;
+            this.CrvMovimiento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CrvMovimiento.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CrvMovimiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CrvMovimiento.Location = new System.Drawing.Point(0, 0);
+            this.CrvMovimiento.Name = "CrvMovimiento";
+            this.CrvMovimiento.Size = new System.Drawing.Size(799, 487);
+            this.CrvMovimiento.TabIndex = 0;
+            this.CrvMovimiento.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // Reporte
+            // FrmReporteMovimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 513);
-            this.Controls.Add(this.reportViewer1);
-            this.Name = "Reporte";
+            this.ClientSize = new System.Drawing.Size(799, 487);
+            this.Controls.Add(this.CrvMovimiento);
+            this.Name = "FrmReporteMovimiento";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "Reporte";
+            this.Text = "FrmReporteMovimiento";
             this.ThemeName = "VisualStudio2012Light";
-            this.Load += new System.EventHandler(this.Reporte_Load);
+            this.Load += new System.EventHandler(this.FrmReporteMovimiento_Load);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -61,7 +66,7 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer CrvMovimiento;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
     }
 }
