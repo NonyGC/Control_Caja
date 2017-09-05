@@ -47,6 +47,11 @@ namespace Capa_Negocio
             return MovDAO.actualizarMovimiento(movEN);
         }
 
+        public DataTable cargarDatosDeDetalle_Reporte(string iDCaja)
+        {
+            return MovDAO.cargarDatosDeDetalle_Reporte(iDCaja); 
+        }
+
         public DataTable cargarDatosDeCabecera_Reporte(string iDCaja)
         {
             return MovDAO.cargarDatosDeCabeceraReporte(iDCaja);

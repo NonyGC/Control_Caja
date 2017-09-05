@@ -20,19 +20,17 @@ namespace CapaPresentacion.DataSet {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DtsMovimiento")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DtsCajaInicio")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DtsMovimiento : global::System.Data.DataSet {
+    public partial class DtsCajaInicio : global::System.Data.DataSet {
         
-        private USP_Movimiento_REPORTE_CABECERADataTable tableUSP_Movimiento_REPORTE_CABECERA;
-        
-        private USP_Movimiento_REPORTE_DETALLEDataTable tableUSP_Movimiento_REPORTE_DETALLE;
+        private USP_CajaInicio_REPORTE_DETALLEDataTable tableUSP_CajaInicio_REPORTE_DETALLE;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DtsMovimiento() {
+        public DtsCajaInicio() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -43,7 +41,7 @@ namespace CapaPresentacion.DataSet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DtsMovimiento(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DtsCajaInicio(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -56,11 +54,8 @@ namespace CapaPresentacion.DataSet {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["USP_Movimiento_REPORTE_CABECERA"] != null)) {
-                    base.Tables.Add(new USP_Movimiento_REPORTE_CABECERADataTable(ds.Tables["USP_Movimiento_REPORTE_CABECERA"]));
-                }
-                if ((ds.Tables["USP_Movimiento_REPORTE_DETALLE"] != null)) {
-                    base.Tables.Add(new USP_Movimiento_REPORTE_DETALLEDataTable(ds.Tables["USP_Movimiento_REPORTE_DETALLE"]));
+                if ((ds.Tables["USP_CajaInicio_REPORTE_DETALLE"] != null)) {
+                    base.Tables.Add(new USP_CajaInicio_REPORTE_DETALLEDataTable(ds.Tables["USP_CajaInicio_REPORTE_DETALLE"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -84,19 +79,9 @@ namespace CapaPresentacion.DataSet {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public USP_Movimiento_REPORTE_CABECERADataTable USP_Movimiento_REPORTE_CABECERA {
+        public USP_CajaInicio_REPORTE_DETALLEDataTable USP_CajaInicio_REPORTE_DETALLE {
             get {
-                return this.tableUSP_Movimiento_REPORTE_CABECERA;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public USP_Movimiento_REPORTE_DETALLEDataTable USP_Movimiento_REPORTE_DETALLE {
-            get {
-                return this.tableUSP_Movimiento_REPORTE_DETALLE;
+                return this.tableUSP_CajaInicio_REPORTE_DETALLE;
             }
         }
         
@@ -142,7 +127,7 @@ namespace CapaPresentacion.DataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DtsMovimiento cln = ((DtsMovimiento)(base.Clone()));
+            DtsCajaInicio cln = ((DtsCajaInicio)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -167,11 +152,8 @@ namespace CapaPresentacion.DataSet {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["USP_Movimiento_REPORTE_CABECERA"] != null)) {
-                    base.Tables.Add(new USP_Movimiento_REPORTE_CABECERADataTable(ds.Tables["USP_Movimiento_REPORTE_CABECERA"]));
-                }
-                if ((ds.Tables["USP_Movimiento_REPORTE_DETALLE"] != null)) {
-                    base.Tables.Add(new USP_Movimiento_REPORTE_DETALLEDataTable(ds.Tables["USP_Movimiento_REPORTE_DETALLE"]));
+                if ((ds.Tables["USP_CajaInicio_REPORTE_DETALLE"] != null)) {
+                    base.Tables.Add(new USP_CajaInicio_REPORTE_DETALLEDataTable(ds.Tables["USP_CajaInicio_REPORTE_DETALLE"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -206,16 +188,10 @@ namespace CapaPresentacion.DataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableUSP_Movimiento_REPORTE_CABECERA = ((USP_Movimiento_REPORTE_CABECERADataTable)(base.Tables["USP_Movimiento_REPORTE_CABECERA"]));
+            this.tableUSP_CajaInicio_REPORTE_DETALLE = ((USP_CajaInicio_REPORTE_DETALLEDataTable)(base.Tables["USP_CajaInicio_REPORTE_DETALLE"]));
             if ((initTable == true)) {
-                if ((this.tableUSP_Movimiento_REPORTE_CABECERA != null)) {
-                    this.tableUSP_Movimiento_REPORTE_CABECERA.InitVars();
-                }
-            }
-            this.tableUSP_Movimiento_REPORTE_DETALLE = ((USP_Movimiento_REPORTE_DETALLEDataTable)(base.Tables["USP_Movimiento_REPORTE_DETALLE"]));
-            if ((initTable == true)) {
-                if ((this.tableUSP_Movimiento_REPORTE_DETALLE != null)) {
-                    this.tableUSP_Movimiento_REPORTE_DETALLE.InitVars();
+                if ((this.tableUSP_CajaInicio_REPORTE_DETALLE != null)) {
+                    this.tableUSP_CajaInicio_REPORTE_DETALLE.InitVars();
                 }
             }
         }
@@ -223,26 +199,18 @@ namespace CapaPresentacion.DataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DtsMovimiento";
+            this.DataSetName = "DtsCajaInicio";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DtsMovimiento.xsd";
+            this.Namespace = "http://tempuri.org/DtsCajaInicio.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableUSP_Movimiento_REPORTE_CABECERA = new USP_Movimiento_REPORTE_CABECERADataTable();
-            base.Tables.Add(this.tableUSP_Movimiento_REPORTE_CABECERA);
-            this.tableUSP_Movimiento_REPORTE_DETALLE = new USP_Movimiento_REPORTE_DETALLEDataTable();
-            base.Tables.Add(this.tableUSP_Movimiento_REPORTE_DETALLE);
+            this.tableUSP_CajaInicio_REPORTE_DETALLE = new USP_CajaInicio_REPORTE_DETALLEDataTable();
+            base.Tables.Add(this.tableUSP_CajaInicio_REPORTE_DETALLE);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeUSP_Movimiento_REPORTE_CABECERA() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeUSP_Movimiento_REPORTE_DETALLE() {
+        private bool ShouldSerializeUSP_CajaInicio_REPORTE_DETALLE() {
             return false;
         }
         
@@ -257,7 +225,7 @@ namespace CapaPresentacion.DataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DtsMovimiento ds = new DtsMovimiento();
+            DtsCajaInicio ds = new DtsCajaInicio();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -302,32 +270,35 @@ namespace CapaPresentacion.DataSet {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void USP_Movimiento_REPORTE_CABECERARowChangeEventHandler(object sender, USP_Movimiento_REPORTE_CABECERARowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void USP_Movimiento_REPORTE_DETALLERowChangeEventHandler(object sender, USP_Movimiento_REPORTE_DETALLERowChangeEvent e);
+        public delegate void USP_CajaInicio_REPORTE_DETALLERowChangeEventHandler(object sender, USP_CajaInicio_REPORTE_DETALLERowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class USP_Movimiento_REPORTE_CABECERADataTable : global::System.Data.TypedTableBase<USP_Movimiento_REPORTE_CABECERARow> {
+        public partial class USP_CajaInicio_REPORTE_DETALLEDataTable : global::System.Data.TypedTableBase<USP_CajaInicio_REPORTE_DETALLERow> {
             
             private global::System.Data.DataColumn columnID;
             
             private global::System.Data.DataColumn columnRazonSocial;
             
-            private global::System.Data.DataColumn columnRuc;
-            
             private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnDocumento;
+            
+            private global::System.Data.DataColumn columnSerie;
+            
+            private global::System.Data.DataColumn columnNumero;
+            
+            private global::System.Data.DataColumn columnImporte;
             
             private global::System.Data.DataColumn columnEstado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_CABECERADataTable() {
-                this.TableName = "USP_Movimiento_REPORTE_CABECERA";
+            public USP_CajaInicio_REPORTE_DETALLEDataTable() {
+                this.TableName = "USP_CajaInicio_REPORTE_DETALLE";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -335,7 +306,7 @@ namespace CapaPresentacion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal USP_Movimiento_REPORTE_CABECERADataTable(global::System.Data.DataTable table) {
+            internal USP_CajaInicio_REPORTE_DETALLEDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -352,7 +323,7 @@ namespace CapaPresentacion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected USP_Movimiento_REPORTE_CABECERADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected USP_CajaInicio_REPORTE_DETALLEDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -375,17 +346,41 @@ namespace CapaPresentacion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn RucColumn {
+            public global::System.Data.DataColumn FechaColumn {
                 get {
-                    return this.columnRuc;
+                    return this.columnFecha;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FechaColumn {
+            public global::System.Data.DataColumn DocumentoColumn {
                 get {
-                    return this.columnFecha;
+                    return this.columnDocumento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SerieColumn {
+                get {
+                    return this.columnSerie;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NumeroColumn {
+                get {
+                    return this.columnNumero;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ImporteColumn {
+                get {
+                    return this.columnImporte;
                 }
             }
             
@@ -408,56 +403,59 @@ namespace CapaPresentacion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_CABECERARow this[int index] {
+            public USP_CajaInicio_REPORTE_DETALLERow this[int index] {
                 get {
-                    return ((USP_Movimiento_REPORTE_CABECERARow)(this.Rows[index]));
+                    return ((USP_CajaInicio_REPORTE_DETALLERow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event USP_Movimiento_REPORTE_CABECERARowChangeEventHandler USP_Movimiento_REPORTE_CABECERARowChanging;
+            public event USP_CajaInicio_REPORTE_DETALLERowChangeEventHandler USP_CajaInicio_REPORTE_DETALLERowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event USP_Movimiento_REPORTE_CABECERARowChangeEventHandler USP_Movimiento_REPORTE_CABECERARowChanged;
+            public event USP_CajaInicio_REPORTE_DETALLERowChangeEventHandler USP_CajaInicio_REPORTE_DETALLERowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event USP_Movimiento_REPORTE_CABECERARowChangeEventHandler USP_Movimiento_REPORTE_CABECERARowDeleting;
+            public event USP_CajaInicio_REPORTE_DETALLERowChangeEventHandler USP_CajaInicio_REPORTE_DETALLERowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event USP_Movimiento_REPORTE_CABECERARowChangeEventHandler USP_Movimiento_REPORTE_CABECERARowDeleted;
+            public event USP_CajaInicio_REPORTE_DETALLERowChangeEventHandler USP_CajaInicio_REPORTE_DETALLERowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddUSP_Movimiento_REPORTE_CABECERARow(USP_Movimiento_REPORTE_CABECERARow row) {
+            public void AddUSP_CajaInicio_REPORTE_DETALLERow(USP_CajaInicio_REPORTE_DETALLERow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_CABECERARow AddUSP_Movimiento_REPORTE_CABECERARow(string ID, string RazonSocial, string Ruc, string Fecha, string Estado) {
-                USP_Movimiento_REPORTE_CABECERARow rowUSP_Movimiento_REPORTE_CABECERARow = ((USP_Movimiento_REPORTE_CABECERARow)(this.NewRow()));
+            public USP_CajaInicio_REPORTE_DETALLERow AddUSP_CajaInicio_REPORTE_DETALLERow(string ID, string RazonSocial, string Fecha, string Documento, string Serie, string Numero, decimal Importe, string Estado) {
+                USP_CajaInicio_REPORTE_DETALLERow rowUSP_CajaInicio_REPORTE_DETALLERow = ((USP_CajaInicio_REPORTE_DETALLERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         RazonSocial,
-                        Ruc,
                         Fecha,
+                        Documento,
+                        Serie,
+                        Numero,
+                        Importe,
                         Estado};
-                rowUSP_Movimiento_REPORTE_CABECERARow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowUSP_Movimiento_REPORTE_CABECERARow);
-                return rowUSP_Movimiento_REPORTE_CABECERARow;
+                rowUSP_CajaInicio_REPORTE_DETALLERow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUSP_CajaInicio_REPORTE_DETALLERow);
+                return rowUSP_CajaInicio_REPORTE_DETALLERow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_CABECERARow FindByID(string ID) {
-                return ((USP_Movimiento_REPORTE_CABECERARow)(this.Rows.Find(new object[] {
+            public USP_CajaInicio_REPORTE_DETALLERow FindByID(string ID) {
+                return ((USP_CajaInicio_REPORTE_DETALLERow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                USP_Movimiento_REPORTE_CABECERADataTable cln = ((USP_Movimiento_REPORTE_CABECERADataTable)(base.Clone()));
+                USP_CajaInicio_REPORTE_DETALLEDataTable cln = ((USP_CajaInicio_REPORTE_DETALLEDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -465,7 +463,7 @@ namespace CapaPresentacion.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new USP_Movimiento_REPORTE_CABECERADataTable();
+                return new USP_CajaInicio_REPORTE_DETALLEDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -473,8 +471,11 @@ namespace CapaPresentacion.DataSet {
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
                 this.columnRazonSocial = base.Columns["RazonSocial"];
-                this.columnRuc = base.Columns["Ruc"];
                 this.columnFecha = base.Columns["Fecha"];
+                this.columnDocumento = base.Columns["Documento"];
+                this.columnSerie = base.Columns["Serie"];
+                this.columnNumero = base.Columns["Numero"];
+                this.columnImporte = base.Columns["Importe"];
                 this.columnEstado = base.Columns["Estado"];
             }
             
@@ -485,10 +486,16 @@ namespace CapaPresentacion.DataSet {
                 base.Columns.Add(this.columnID);
                 this.columnRazonSocial = new global::System.Data.DataColumn("RazonSocial", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRazonSocial);
-                this.columnRuc = new global::System.Data.DataColumn("Ruc", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRuc);
                 this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
+                this.columnDocumento = new global::System.Data.DataColumn("Documento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDocumento);
+                this.columnSerie = new global::System.Data.DataColumn("Serie", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSerie);
+                this.columnNumero = new global::System.Data.DataColumn("Numero", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero);
+                this.columnImporte = new global::System.Data.DataColumn("Importe", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImporte);
                 this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEstado);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -497,37 +504,39 @@ namespace CapaPresentacion.DataSet {
                 this.columnID.Unique = true;
                 this.columnID.MaxLength = 6;
                 this.columnRazonSocial.MaxLength = 100;
-                this.columnRuc.MaxLength = 11;
                 this.columnFecha.ReadOnly = true;
                 this.columnFecha.MaxLength = 30;
+                this.columnDocumento.MaxLength = 250;
+                this.columnSerie.MaxLength = 5;
+                this.columnNumero.MaxLength = 10;
                 this.columnEstado.ReadOnly = true;
                 this.columnEstado.MaxLength = 12;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_CABECERARow NewUSP_Movimiento_REPORTE_CABECERARow() {
-                return ((USP_Movimiento_REPORTE_CABECERARow)(this.NewRow()));
+            public USP_CajaInicio_REPORTE_DETALLERow NewUSP_CajaInicio_REPORTE_DETALLERow() {
+                return ((USP_CajaInicio_REPORTE_DETALLERow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new USP_Movimiento_REPORTE_CABECERARow(builder);
+                return new USP_CajaInicio_REPORTE_DETALLERow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(USP_Movimiento_REPORTE_CABECERARow);
+                return typeof(USP_CajaInicio_REPORTE_DETALLERow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.USP_Movimiento_REPORTE_CABECERARowChanged != null)) {
-                    this.USP_Movimiento_REPORTE_CABECERARowChanged(this, new USP_Movimiento_REPORTE_CABECERARowChangeEvent(((USP_Movimiento_REPORTE_CABECERARow)(e.Row)), e.Action));
+                if ((this.USP_CajaInicio_REPORTE_DETALLERowChanged != null)) {
+                    this.USP_CajaInicio_REPORTE_DETALLERowChanged(this, new USP_CajaInicio_REPORTE_DETALLERowChangeEvent(((USP_CajaInicio_REPORTE_DETALLERow)(e.Row)), e.Action));
                 }
             }
             
@@ -535,8 +544,8 @@ namespace CapaPresentacion.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.USP_Movimiento_REPORTE_CABECERARowChanging != null)) {
-                    this.USP_Movimiento_REPORTE_CABECERARowChanging(this, new USP_Movimiento_REPORTE_CABECERARowChangeEvent(((USP_Movimiento_REPORTE_CABECERARow)(e.Row)), e.Action));
+                if ((this.USP_CajaInicio_REPORTE_DETALLERowChanging != null)) {
+                    this.USP_CajaInicio_REPORTE_DETALLERowChanging(this, new USP_CajaInicio_REPORTE_DETALLERowChangeEvent(((USP_CajaInicio_REPORTE_DETALLERow)(e.Row)), e.Action));
                 }
             }
             
@@ -544,8 +553,8 @@ namespace CapaPresentacion.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.USP_Movimiento_REPORTE_CABECERARowDeleted != null)) {
-                    this.USP_Movimiento_REPORTE_CABECERARowDeleted(this, new USP_Movimiento_REPORTE_CABECERARowChangeEvent(((USP_Movimiento_REPORTE_CABECERARow)(e.Row)), e.Action));
+                if ((this.USP_CajaInicio_REPORTE_DETALLERowDeleted != null)) {
+                    this.USP_CajaInicio_REPORTE_DETALLERowDeleted(this, new USP_CajaInicio_REPORTE_DETALLERowChangeEvent(((USP_CajaInicio_REPORTE_DETALLERow)(e.Row)), e.Action));
                 }
             }
             
@@ -553,14 +562,14 @@ namespace CapaPresentacion.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.USP_Movimiento_REPORTE_CABECERARowDeleting != null)) {
-                    this.USP_Movimiento_REPORTE_CABECERARowDeleting(this, new USP_Movimiento_REPORTE_CABECERARowChangeEvent(((USP_Movimiento_REPORTE_CABECERARow)(e.Row)), e.Action));
+                if ((this.USP_CajaInicio_REPORTE_DETALLERowDeleting != null)) {
+                    this.USP_CajaInicio_REPORTE_DETALLERowDeleting(this, new USP_CajaInicio_REPORTE_DETALLERowChangeEvent(((USP_CajaInicio_REPORTE_DETALLERow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveUSP_Movimiento_REPORTE_CABECERARow(USP_Movimiento_REPORTE_CABECERARow row) {
+            public void RemoveUSP_CajaInicio_REPORTE_DETALLERow(USP_CajaInicio_REPORTE_DETALLERow row) {
                 this.Rows.Remove(row);
             }
             
@@ -569,7 +578,7 @@ namespace CapaPresentacion.DataSet {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DtsMovimiento ds = new DtsMovimiento();
+                DtsCajaInicio ds = new DtsCajaInicio();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -587,360 +596,7 @@ namespace CapaPresentacion.DataSet {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "USP_Movimiento_REPORTE_CABECERADataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class USP_Movimiento_REPORTE_DETALLEDataTable : global::System.Data.TypedTableBase<USP_Movimiento_REPORTE_DETALLERow> {
-            
-            private global::System.Data.DataColumn columnCod;
-            
-            private global::System.Data.DataColumn columnDescripcion;
-            
-            private global::System.Data.DataColumn columnObservacion;
-            
-            private global::System.Data.DataColumn columnComprobante;
-            
-            private global::System.Data.DataColumn columnSerie;
-            
-            private global::System.Data.DataColumn columnNumero;
-            
-            private global::System.Data.DataColumn columnTipoMovimiento;
-            
-            private global::System.Data.DataColumn columnMonto;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_DETALLEDataTable() {
-                this.TableName = "USP_Movimiento_REPORTE_DETALLE";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal USP_Movimiento_REPORTE_DETALLEDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected USP_Movimiento_REPORTE_DETALLEDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CodColumn {
-                get {
-                    return this.columnCod;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DescripcionColumn {
-                get {
-                    return this.columnDescripcion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ObservacionColumn {
-                get {
-                    return this.columnObservacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ComprobanteColumn {
-                get {
-                    return this.columnComprobante;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SerieColumn {
-                get {
-                    return this.columnSerie;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NumeroColumn {
-                get {
-                    return this.columnNumero;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TipoMovimientoColumn {
-                get {
-                    return this.columnTipoMovimiento;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MontoColumn {
-                get {
-                    return this.columnMonto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_DETALLERow this[int index] {
-                get {
-                    return ((USP_Movimiento_REPORTE_DETALLERow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event USP_Movimiento_REPORTE_DETALLERowChangeEventHandler USP_Movimiento_REPORTE_DETALLERowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event USP_Movimiento_REPORTE_DETALLERowChangeEventHandler USP_Movimiento_REPORTE_DETALLERowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event USP_Movimiento_REPORTE_DETALLERowChangeEventHandler USP_Movimiento_REPORTE_DETALLERowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event USP_Movimiento_REPORTE_DETALLERowChangeEventHandler USP_Movimiento_REPORTE_DETALLERowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddUSP_Movimiento_REPORTE_DETALLERow(USP_Movimiento_REPORTE_DETALLERow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_DETALLERow AddUSP_Movimiento_REPORTE_DETALLERow(string Cod, string Descripcion, string Observacion, string Comprobante, string Serie, string Numero, string TipoMovimiento, decimal Monto) {
-                USP_Movimiento_REPORTE_DETALLERow rowUSP_Movimiento_REPORTE_DETALLERow = ((USP_Movimiento_REPORTE_DETALLERow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Cod,
-                        Descripcion,
-                        Observacion,
-                        Comprobante,
-                        Serie,
-                        Numero,
-                        TipoMovimiento,
-                        Monto};
-                rowUSP_Movimiento_REPORTE_DETALLERow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowUSP_Movimiento_REPORTE_DETALLERow);
-                return rowUSP_Movimiento_REPORTE_DETALLERow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                USP_Movimiento_REPORTE_DETALLEDataTable cln = ((USP_Movimiento_REPORTE_DETALLEDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new USP_Movimiento_REPORTE_DETALLEDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnCod = base.Columns["Cod"];
-                this.columnDescripcion = base.Columns["Descripcion"];
-                this.columnObservacion = base.Columns["Observacion"];
-                this.columnComprobante = base.Columns["Comprobante"];
-                this.columnSerie = base.Columns["Serie"];
-                this.columnNumero = base.Columns["Numero"];
-                this.columnTipoMovimiento = base.Columns["TipoMovimiento"];
-                this.columnMonto = base.Columns["Monto"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnCod = new global::System.Data.DataColumn("Cod", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod);
-                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescripcion);
-                this.columnObservacion = new global::System.Data.DataColumn("Observacion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnObservacion);
-                this.columnComprobante = new global::System.Data.DataColumn("Comprobante", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnComprobante);
-                this.columnSerie = new global::System.Data.DataColumn("Serie", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSerie);
-                this.columnNumero = new global::System.Data.DataColumn("Numero", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumero);
-                this.columnTipoMovimiento = new global::System.Data.DataColumn("TipoMovimiento", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipoMovimiento);
-                this.columnMonto = new global::System.Data.DataColumn("Monto", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMonto);
-                this.columnCod.AllowDBNull = false;
-                this.columnCod.MaxLength = 10;
-                this.columnDescripcion.MaxLength = 100;
-                this.columnObservacion.MaxLength = 100;
-                this.columnComprobante.MaxLength = 250;
-                this.columnSerie.MaxLength = 5;
-                this.columnNumero.MaxLength = 10;
-                this.columnTipoMovimiento.MaxLength = 20;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_DETALLERow NewUSP_Movimiento_REPORTE_DETALLERow() {
-                return ((USP_Movimiento_REPORTE_DETALLERow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new USP_Movimiento_REPORTE_DETALLERow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(USP_Movimiento_REPORTE_DETALLERow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.USP_Movimiento_REPORTE_DETALLERowChanged != null)) {
-                    this.USP_Movimiento_REPORTE_DETALLERowChanged(this, new USP_Movimiento_REPORTE_DETALLERowChangeEvent(((USP_Movimiento_REPORTE_DETALLERow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.USP_Movimiento_REPORTE_DETALLERowChanging != null)) {
-                    this.USP_Movimiento_REPORTE_DETALLERowChanging(this, new USP_Movimiento_REPORTE_DETALLERowChangeEvent(((USP_Movimiento_REPORTE_DETALLERow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.USP_Movimiento_REPORTE_DETALLERowDeleted != null)) {
-                    this.USP_Movimiento_REPORTE_DETALLERowDeleted(this, new USP_Movimiento_REPORTE_DETALLERowChangeEvent(((USP_Movimiento_REPORTE_DETALLERow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.USP_Movimiento_REPORTE_DETALLERowDeleting != null)) {
-                    this.USP_Movimiento_REPORTE_DETALLERowDeleting(this, new USP_Movimiento_REPORTE_DETALLERowChangeEvent(((USP_Movimiento_REPORTE_DETALLERow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveUSP_Movimiento_REPORTE_DETALLERow(USP_Movimiento_REPORTE_DETALLERow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DtsMovimiento ds = new DtsMovimiento();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "USP_Movimiento_REPORTE_DETALLEDataTable";
+                attribute2.FixedValue = "USP_CajaInicio_REPORTE_DETALLEDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -984,25 +640,25 @@ namespace CapaPresentacion.DataSet {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class USP_Movimiento_REPORTE_CABECERARow : global::System.Data.DataRow {
+        public partial class USP_CajaInicio_REPORTE_DETALLERow : global::System.Data.DataRow {
             
-            private USP_Movimiento_REPORTE_CABECERADataTable tableUSP_Movimiento_REPORTE_CABECERA;
+            private USP_CajaInicio_REPORTE_DETALLEDataTable tableUSP_CajaInicio_REPORTE_DETALLE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal USP_Movimiento_REPORTE_CABECERARow(global::System.Data.DataRowBuilder rb) : 
+            internal USP_CajaInicio_REPORTE_DETALLERow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableUSP_Movimiento_REPORTE_CABECERA = ((USP_Movimiento_REPORTE_CABECERADataTable)(this.Table));
+                this.tableUSP_CajaInicio_REPORTE_DETALLE = ((USP_CajaInicio_REPORTE_DETALLEDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string ID {
                 get {
-                    return ((string)(this[this.tableUSP_Movimiento_REPORTE_CABECERA.IDColumn]));
+                    return ((string)(this[this.tableUSP_CajaInicio_REPORTE_DETALLE.IDColumn]));
                 }
                 set {
-                    this[this.tableUSP_Movimiento_REPORTE_CABECERA.IDColumn] = value;
+                    this[this.tableUSP_CajaInicio_REPORTE_DETALLE.IDColumn] = value;
                 }
             }
             
@@ -1011,32 +667,15 @@ namespace CapaPresentacion.DataSet {
             public string RazonSocial {
                 get {
                     try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_CABECERA.RazonSocialColumn]));
+                        return ((string)(this[this.tableUSP_CajaInicio_REPORTE_DETALLE.RazonSocialColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RazonSocial\' de la tabla \'USP_Movimiento_REPORTE_CABECERA" +
-                                "\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RazonSocial\' de la tabla \'USP_CajaInicio_REPORTE_DETALLE\'" +
+                                " es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUSP_Movimiento_REPORTE_CABECERA.RazonSocialColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Ruc {
-                get {
-                    try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_CABECERA.RucColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ruc\' de la tabla \'USP_Movimiento_REPORTE_CABECERA\' es DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUSP_Movimiento_REPORTE_CABECERA.RucColumn] = value;
+                    this[this.tableUSP_CajaInicio_REPORTE_DETALLE.RazonSocialColumn] = value;
                 }
             }
             
@@ -1045,157 +684,32 @@ namespace CapaPresentacion.DataSet {
             public string Fecha {
                 get {
                     try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_CABECERA.FechaColumn]));
+                        return ((string)(this[this.tableUSP_CajaInicio_REPORTE_DETALLE.FechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'USP_Movimiento_REPORTE_CABECERA\' es D" +
-                                "BNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'USP_CajaInicio_REPORTE_DETALLE\' es DB" +
+                                "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableUSP_Movimiento_REPORTE_CABECERA.FechaColumn] = value;
+                    this[this.tableUSP_CajaInicio_REPORTE_DETALLE.FechaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Estado {
+            public string Documento {
                 get {
                     try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_CABECERA.EstadoColumn]));
+                        return ((string)(this[this.tableUSP_CajaInicio_REPORTE_DETALLE.DocumentoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Estado\' de la tabla \'USP_Movimiento_REPORTE_CABECERA\' es " +
-                                "DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Documento\' de la tabla \'USP_CajaInicio_REPORTE_DETALLE\' e" +
+                                "s DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUSP_Movimiento_REPORTE_CABECERA.EstadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsRazonSocialNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_CABECERA.RazonSocialColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetRazonSocialNull() {
-                this[this.tableUSP_Movimiento_REPORTE_CABECERA.RazonSocialColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsRucNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_CABECERA.RucColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetRucNull() {
-                this[this.tableUSP_Movimiento_REPORTE_CABECERA.RucColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFechaNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_CABECERA.FechaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFechaNull() {
-                this[this.tableUSP_Movimiento_REPORTE_CABECERA.FechaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEstadoNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_CABECERA.EstadoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEstadoNull() {
-                this[this.tableUSP_Movimiento_REPORTE_CABECERA.EstadoColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class USP_Movimiento_REPORTE_DETALLERow : global::System.Data.DataRow {
-            
-            private USP_Movimiento_REPORTE_DETALLEDataTable tableUSP_Movimiento_REPORTE_DETALLE;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal USP_Movimiento_REPORTE_DETALLERow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableUSP_Movimiento_REPORTE_DETALLE = ((USP_Movimiento_REPORTE_DETALLEDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Cod {
-                get {
-                    return ((string)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.CodColumn]));
-                }
-                set {
-                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.CodColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Descripcion {
-                get {
-                    try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.DescripcionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descripcion\' de la tabla \'USP_Movimiento_REPORTE_DETALLE\'" +
-                                " es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.DescripcionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Observacion {
-                get {
-                    try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.ObservacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Observacion\' de la tabla \'USP_Movimiento_REPORTE_DETALLE\'" +
-                                " es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.ObservacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Comprobante {
-                get {
-                    try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.ComprobanteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Comprobante\' de la tabla \'USP_Movimiento_REPORTE_DETALLE\'" +
-                                " es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.ComprobanteColumn] = value;
+                    this[this.tableUSP_CajaInicio_REPORTE_DETALLE.DocumentoColumn] = value;
                 }
             }
             
@@ -1204,15 +718,15 @@ namespace CapaPresentacion.DataSet {
             public string Serie {
                 get {
                     try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.SerieColumn]));
+                        return ((string)(this[this.tableUSP_CajaInicio_REPORTE_DETALLE.SerieColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Serie\' de la tabla \'USP_Movimiento_REPORTE_DETALLE\' es DB" +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Serie\' de la tabla \'USP_CajaInicio_REPORTE_DETALLE\' es DB" +
                                 "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.SerieColumn] = value;
+                    this[this.tableUSP_CajaInicio_REPORTE_DETALLE.SerieColumn] = value;
                 }
             }
             
@@ -1221,168 +735,134 @@ namespace CapaPresentacion.DataSet {
             public string Numero {
                 get {
                     try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.NumeroColumn]));
+                        return ((string)(this[this.tableUSP_CajaInicio_REPORTE_DETALLE.NumeroColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Numero\' de la tabla \'USP_Movimiento_REPORTE_DETALLE\' es D" +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Numero\' de la tabla \'USP_CajaInicio_REPORTE_DETALLE\' es D" +
                                 "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.NumeroColumn] = value;
+                    this[this.tableUSP_CajaInicio_REPORTE_DETALLE.NumeroColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TipoMovimiento {
+            public decimal Importe {
                 get {
                     try {
-                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.TipoMovimientoColumn]));
+                        return ((decimal)(this[this.tableUSP_CajaInicio_REPORTE_DETALLE.ImporteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TipoMovimiento\' de la tabla \'USP_Movimiento_REPORTE_DETAL" +
-                                "LE\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Importe\' de la tabla \'USP_CajaInicio_REPORTE_DETALLE\' es " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.TipoMovimientoColumn] = value;
+                    this[this.tableUSP_CajaInicio_REPORTE_DETALLE.ImporteColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Monto {
+            public string Estado {
                 get {
                     try {
-                        return ((decimal)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.MontoColumn]));
+                        return ((string)(this[this.tableUSP_CajaInicio_REPORTE_DETALLE.EstadoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Monto\' de la tabla \'USP_Movimiento_REPORTE_DETALLE\' es DB" +
-                                "Null.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Estado\' de la tabla \'USP_CajaInicio_REPORTE_DETALLE\' es D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.MontoColumn] = value;
+                    this[this.tableUSP_CajaInicio_REPORTE_DETALLE.EstadoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDescripcionNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.DescripcionColumn);
+            public bool IsRazonSocialNull() {
+                return this.IsNull(this.tableUSP_CajaInicio_REPORTE_DETALLE.RazonSocialColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDescripcionNull() {
-                this[this.tableUSP_Movimiento_REPORTE_DETALLE.DescripcionColumn] = global::System.Convert.DBNull;
+            public void SetRazonSocialNull() {
+                this[this.tableUSP_CajaInicio_REPORTE_DETALLE.RazonSocialColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsObservacionNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.ObservacionColumn);
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableUSP_CajaInicio_REPORTE_DETALLE.FechaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetObservacionNull() {
-                this[this.tableUSP_Movimiento_REPORTE_DETALLE.ObservacionColumn] = global::System.Convert.DBNull;
+            public void SetFechaNull() {
+                this[this.tableUSP_CajaInicio_REPORTE_DETALLE.FechaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsComprobanteNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.ComprobanteColumn);
+            public bool IsDocumentoNull() {
+                return this.IsNull(this.tableUSP_CajaInicio_REPORTE_DETALLE.DocumentoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetComprobanteNull() {
-                this[this.tableUSP_Movimiento_REPORTE_DETALLE.ComprobanteColumn] = global::System.Convert.DBNull;
+            public void SetDocumentoNull() {
+                this[this.tableUSP_CajaInicio_REPORTE_DETALLE.DocumentoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSerieNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.SerieColumn);
+                return this.IsNull(this.tableUSP_CajaInicio_REPORTE_DETALLE.SerieColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSerieNull() {
-                this[this.tableUSP_Movimiento_REPORTE_DETALLE.SerieColumn] = global::System.Convert.DBNull;
+                this[this.tableUSP_CajaInicio_REPORTE_DETALLE.SerieColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNumeroNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.NumeroColumn);
+                return this.IsNull(this.tableUSP_CajaInicio_REPORTE_DETALLE.NumeroColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNumeroNull() {
-                this[this.tableUSP_Movimiento_REPORTE_DETALLE.NumeroColumn] = global::System.Convert.DBNull;
+                this[this.tableUSP_CajaInicio_REPORTE_DETALLE.NumeroColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTipoMovimientoNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.TipoMovimientoColumn);
+            public bool IsImporteNull() {
+                return this.IsNull(this.tableUSP_CajaInicio_REPORTE_DETALLE.ImporteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTipoMovimientoNull() {
-                this[this.tableUSP_Movimiento_REPORTE_DETALLE.TipoMovimientoColumn] = global::System.Convert.DBNull;
+            public void SetImporteNull() {
+                this[this.tableUSP_CajaInicio_REPORTE_DETALLE.ImporteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMontoNull() {
-                return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.MontoColumn);
+            public bool IsEstadoNull() {
+                return this.IsNull(this.tableUSP_CajaInicio_REPORTE_DETALLE.EstadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMontoNull() {
-                this[this.tableUSP_Movimiento_REPORTE_DETALLE.MontoColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class USP_Movimiento_REPORTE_CABECERARowChangeEvent : global::System.EventArgs {
-            
-            private USP_Movimiento_REPORTE_CABECERARow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_CABECERARowChangeEvent(USP_Movimiento_REPORTE_CABECERARow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_CABECERARow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
+            public void SetEstadoNull() {
+                this[this.tableUSP_CajaInicio_REPORTE_DETALLE.EstadoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1390,22 +870,22 @@ namespace CapaPresentacion.DataSet {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class USP_Movimiento_REPORTE_DETALLERowChangeEvent : global::System.EventArgs {
+        public class USP_CajaInicio_REPORTE_DETALLERowChangeEvent : global::System.EventArgs {
             
-            private USP_Movimiento_REPORTE_DETALLERow eventRow;
+            private USP_CajaInicio_REPORTE_DETALLERow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_DETALLERowChangeEvent(USP_Movimiento_REPORTE_DETALLERow row, global::System.Data.DataRowAction action) {
+            public USP_CajaInicio_REPORTE_DETALLERowChangeEvent(USP_CajaInicio_REPORTE_DETALLERow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_DETALLERow Row {
+            public USP_CajaInicio_REPORTE_DETALLERow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1421,7 +901,7 @@ namespace CapaPresentacion.DataSet {
         }
     }
 }
-namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
+namespace CapaPresentacion.DataSet.DtsCajaInicioTableAdapters {
     
     
     /// <summary>
@@ -1433,7 +913,7 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class USP_Movimiento_REPORTE_CABECERATableAdapter : global::System.ComponentModel.Component {
+    public partial class USP_CajaInicio_REPORTE_DETALLETableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1447,7 +927,7 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public USP_Movimiento_REPORTE_CABECERATableAdapter() {
+        public USP_CajaInicio_REPORTE_DETALLETableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1544,11 +1024,14 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "USP_Movimiento_REPORTE_CABECERA";
+            tableMapping.DataSetTable = "USP_CajaInicio_REPORTE_DETALLE";
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("RazonSocial", "RazonSocial");
-            tableMapping.ColumnMappings.Add("Ruc", "Ruc");
             tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("Documento", "Documento");
+            tableMapping.ColumnMappings.Add("Serie", "Serie");
+            tableMapping.ColumnMappings.Add("Numero", "Numero");
+            tableMapping.ColumnMappings.Add("Importe", "Importe");
             tableMapping.ColumnMappings.Add("Estado", "Estado");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -1566,23 +1049,23 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.USP_Movimiento_REPORTE_CABECERA";
+            this._commandCollection[0].CommandText = "dbo.USP_CajaInicio_REPORTE_DETALLE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCaja", global::System.Data.SqlDbType.Char, 6, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDEmpresa", global::System.Data.SqlDbType.Char, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DtsMovimiento.USP_Movimiento_REPORTE_CABECERADataTable dataTable, string IDCaja) {
+        public virtual int Fill(DtsCajaInicio.USP_CajaInicio_REPORTE_DETALLEDataTable dataTable, string IDEmpresa) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((IDCaja == null)) {
+            if ((IDEmpresa == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(IDCaja));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(IDEmpresa));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1595,203 +1078,15 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DtsMovimiento.USP_Movimiento_REPORTE_CABECERADataTable GetData(string IDCaja) {
+        public virtual DtsCajaInicio.USP_CajaInicio_REPORTE_DETALLEDataTable GetData(string IDEmpresa) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((IDCaja == null)) {
+            if ((IDEmpresa == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(IDCaja));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(IDEmpresa));
             }
-            DtsMovimiento.USP_Movimiento_REPORTE_CABECERADataTable dataTable = new DtsMovimiento.USP_Movimiento_REPORTE_CABECERADataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class USP_Movimiento_REPORTE_DETALLETableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public USP_Movimiento_REPORTE_DETALLETableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "USP_Movimiento_REPORTE_DETALLE";
-            tableMapping.ColumnMappings.Add("Cod", "Cod");
-            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
-            tableMapping.ColumnMappings.Add("Observacion", "Observacion");
-            tableMapping.ColumnMappings.Add("Comprobante", "Comprobante");
-            tableMapping.ColumnMappings.Add("Serie", "Serie");
-            tableMapping.ColumnMappings.Add("Numero", "Numero");
-            tableMapping.ColumnMappings.Add("TipoMovimiento", "TipoMovimiento");
-            tableMapping.ColumnMappings.Add("Monto", "Monto");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.Conn2;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.USP_Movimiento_REPORTE_DETALLE";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCaja", global::System.Data.SqlDbType.Char, 6, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DtsMovimiento.USP_Movimiento_REPORTE_DETALLEDataTable dataTable, string IDCaja) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((IDCaja == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(IDCaja));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DtsMovimiento.USP_Movimiento_REPORTE_DETALLEDataTable GetData(string IDCaja) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((IDCaja == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(IDCaja));
-            }
-            DtsMovimiento.USP_Movimiento_REPORTE_DETALLEDataTable dataTable = new DtsMovimiento.USP_Movimiento_REPORTE_DETALLEDataTable();
+            DtsCajaInicio.USP_CajaInicio_REPORTE_DETALLEDataTable dataTable = new DtsCajaInicio.USP_CajaInicio_REPORTE_DETALLEDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1865,7 +1160,7 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DtsMovimiento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DtsCajaInicio dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1875,7 +1170,7 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DtsMovimiento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DtsCajaInicio dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1885,7 +1180,7 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DtsMovimiento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DtsCajaInicio dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1919,7 +1214,7 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DtsMovimiento dataSet) {
+        public virtual int UpdateAll(DtsCajaInicio dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

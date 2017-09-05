@@ -230,6 +230,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.grvListadaComprobante);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmDocumento";
             // 
             // 

@@ -53,6 +53,14 @@ namespace Capa_Datos
             }
         }
 
+        public DataTable cargarDatosDeDetalle_Reporte(string iDCaja)
+        {
+            DataTable dtDetalle = new DataTable();
+            SqlCommand cmd = CommandProcedure("USP_Movimiento_REPORTE_DETALLE");
+            cmd.Parameters.AddWithValue("@IDCaja", iDCaja);
+            dtDetalle = GetDataTable(cmd);
+            return dtDetalle; 
+        }
 
         public DataTable cargarDatosDeCabeceraReporte(string iDCaja)
         {

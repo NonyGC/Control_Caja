@@ -84,6 +84,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet\DtsCajaInicio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DtsCajaInicio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\DtsMovimiento.cs">
       <DependentUpon>DtsMovimiento.xsd</DependentUpon>
     </Compile>
@@ -128,10 +133,16 @@
     <Compile Include="FrmMovimientoCaja.Designer.cs">
       <DependentUpon>FrmMovimientoCaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmReporteMovimiento.cs">
+    <Compile Include="FrmReporte\FrmReporteCajaIncio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmReporteMovimiento.Designer.cs">
+    <Compile Include="FrmReporte\FrmReporteCajaIncio.Designer.cs">
+      <DependentUpon>FrmReporteCajaIncio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporte\FrmReporteMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporte\FrmReporteMovimiento.Designer.cs">
       <DependentUpon>FrmReporteMovimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSaldoInicial.cs">
@@ -165,6 +176,12 @@
       <DependentUpon>RptMovimiento.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RptSaldosIniciales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSaldosIniciales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Shared.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -186,7 +203,10 @@
     <EmbeddedResource Include="FrmMovimientoCaja.resx">
       <DependentUpon>FrmMovimientoCaja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmReporteMovimiento.resx">
+    <EmbeddedResource Include="FrmReporte\FrmReporteCajaIncio.resx">
+      <DependentUpon>FrmReporteCajaIncio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporte\FrmReporteMovimiento.resx">
       <DependentUpon>FrmReporteMovimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSaldoInicial.resx">
@@ -204,9 +224,24 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptMovimiento.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="RptSaldosIniciales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSaldosIniciales.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DataSet\DtsCajaInicio.xsc">
+      <DependentUpon>DtsCajaInicio.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DtsCajaInicio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DtsCajaInicio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DtsCajaInicio.xss">
+      <DependentUpon>DtsCajaInicio.xsd</DependentUpon>
+    </None>
     <None Include="DataSet\DtsMovimiento.xsc">
       <DependentUpon>DtsMovimiento.xsd</DependentUpon>
     </None>

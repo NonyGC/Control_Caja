@@ -207,5 +207,12 @@ namespace CapaPresentacion
             frm.ShowDialog();
             frm.Dispose();
         }
+
+        private void BtnReporte_Click(object sender, EventArgs e)
+        {
+            FrmReporteCajaIncio frm = new FrmReporteCajaIncio(EmpresaEN.idEmpresa);
+            frm.ShowDialog();
+            frm.Dispose();
+        }
     }
 }

@@ -43,6 +43,16 @@ namespace Capa_Datos
                 CloseDB();
             }
         }
+
+        public DataTable cargarDatosDeDetalle_Reporte(string idEmpresa)
+        {
+            DataTable dtDetalle = new DataTable();
+            SqlCommand cmd = CommandProcedure("USP_CajaInicio_REPORTE_DETALLE");
+            cmd.Parameters.AddWithValue("@IDEmpresa", idEmpresa);
+            dtDetalle = GetDataTable(cmd);
+            return dtDetalle;
+        }
+
         public string ObtenerCodigo()
         {
             string Codigo;

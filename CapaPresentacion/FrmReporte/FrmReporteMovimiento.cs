@@ -36,16 +36,19 @@ namespace CapaPresentacion
         {
             //DataSet Movimiento
             DtsMovimiento DtsMC = new DtsMovimiento();
-            string nameTable = "USP_Movimiento_REPORTE_CABECERA";
+            string nameTblCabecera = "USP_Movimiento_REPORTE_CABECERA";
+            string nameTblDetalle = "USP_Movimiento_REPORTE_DETALLE";
             RptM = new RptMovimiento();
-            DataTable dt = MovBL.cargarDatosDeCabecera_Reporte(iDCaja);
-            DtsMC.Tables[nameTable].Merge(dt);
-            
-            RptM.SetDataSource(DtsMC.Tables[nameTable]); 
-            
+            DataTable dtCabecera = MovBL.cargarDatosDeCabecera_Reporte(iDCaja);
+            DataTable dtDetalle = MovBL.cargarDatosDeDetalle_Reporte(iDCaja);
+            DtsMC.Tables[nameTblCabecera].Merge(dtCabecera);
+            DtsMC.Tables[nameTblDetalle].Merge(dtDetalle);
+
+            RptM.SetDataSource(DtsMC);
+            //RptM.SetDataSource(DtsMC.Tables[nameTblDetalle]);
             CrvMovimiento.ReportSource = RptM;
             CrvMovimiento.Refresh();
-            
+
         }
     }
 }

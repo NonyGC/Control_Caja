@@ -68,6 +68,7 @@
             this.BtnGuardar = new Telerik.WinControls.UI.RadButton();
             this.lblFecha = new System.Windows.Forms.Label();
             this.BtnModificar = new Telerik.WinControls.UI.RadButton();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpFecha)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -86,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnModificar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -492,11 +494,22 @@
             this.BtnModificar.ThemeName = "VisualStudio2012Light";
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
+            // radButton1
+            // 
+            this.radButton1.Location = new System.Drawing.Point(81, 245);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(169, 24);
+            this.radButton1.TabIndex = 24;
+            this.radButton1.Text = "REPORTE";
+            this.radButton1.ThemeName = "VisualStudio2012Light";
+            this.radButton1.Click += new System.EventHandler(this.BtnReporte_Click);
+            // 
             // FrmSaldoInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 481);
+            this.Controls.Add(this.radButton1);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblEmpresa);
@@ -511,6 +524,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmSaldoInicial";
             // 
             // 
@@ -541,6 +555,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnModificar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -579,5 +594,6 @@
         private Telerik.WinControls.UI.RadButton BtnGuardar;
         private System.Windows.Forms.Label lblFecha;
         private Telerik.WinControls.UI.RadButton BtnModificar;
+        private Telerik.WinControls.UI.RadButton radButton1;
     }
 }

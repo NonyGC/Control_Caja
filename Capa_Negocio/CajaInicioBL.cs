@@ -38,5 +38,10 @@ namespace Capa_Negocio
         {
             return CajDAO.ObtenerCodigo();
         }
+
+        public DataTable cargarDatosDeDetalle_Reporte(string idEmpresa)
+        {
+            return CajDAO.cargarDatosDeDetalle_Reporte(idEmpresa);
+        }
     }
 }

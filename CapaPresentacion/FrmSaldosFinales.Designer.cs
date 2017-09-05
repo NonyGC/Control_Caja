@@ -172,6 +172,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.GrvSaldosFinales);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmSaldosFinales";
             // 
             // 
