@@ -12,6 +12,8 @@ using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Collections;
+using Capa_Entidad;
 
 namespace CapaPresentacion
 {
@@ -20,16 +22,18 @@ namespace CapaPresentacion
         private string iDCaja;
         MovimientoBL MovBL = new MovimientoBL();
         private ReportClass RptM;
+        private CajaCierre cajCEN;
 
         public FrmReporteMovimiento()
         {
             InitializeComponent();
         }
 
-        public FrmReporteMovimiento(string iDCaja)
+        public FrmReporteMovimiento(string iDCaja, CajaCierre cajCEN)
         {
             InitializeComponent();
             this.iDCaja = iDCaja;
+            this.cajCEN = cajCEN;
         }
 
         private void FrmReporteMovimiento_Load(object sender, EventArgs e)
@@ -43,12 +47,18 @@ namespace CapaPresentacion
             DataTable dtDetalle = MovBL.cargarDatosDeDetalle_Reporte(iDCaja);
             DtsMC.Tables[nameTblCabecera].Merge(dtCabecera);
             DtsMC.Tables[nameTblDetalle].Merge(dtDetalle);
-
             RptM.SetDataSource(DtsMC);
-            //RptM.SetDataSource(DtsMC.Tables[nameTblDetalle]);
+            AsignarCampoDeParametroCrystal();
             CrvMovimiento.ReportSource = RptM;
             CrvMovimiento.Refresh();
-
         }
+        private void AsignarCampoDeParametroCrystal()
+        {
+            RptM.SetParameterValue("PrmTotalIngreso",cajCEN.TotalIngreso);
+            RptM.SetParameterValue("PrmTotalEgreso", cajCEN.TotalEgreso);
+            RptM.SetParameterValue("PrmSaldoInicial", cajCEN.SaldoIncial);
+            RptM.SetParameterValue("PrmSaldoFinal", cajCEN.SaldoFinal);
+        }
+
     }
 }

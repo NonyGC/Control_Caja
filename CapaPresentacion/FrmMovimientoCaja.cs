@@ -204,6 +204,13 @@ namespace CapaPresentacion
             var result = MultCbo.Cells[Columna].Value.ToString();
             return result;
         }
+        private void AsignarSaldos_CajCEN()
+        {
+            CajCEN.SaldoIncial = _saldoIncial;
+            CajCEN.TotalIngreso = _ingreso;
+            CajCEN.TotalEgreso = _egreso;
+            CajCEN.SaldoFinal = _saldoFinal;
+        }
 
         private void BtnCerarCaja_Click(object sender, EventArgs e)
         {
@@ -223,10 +230,7 @@ namespace CapaPresentacion
 
             CajCEN.id = idCajaInicio;
             CajCEN.Empresa = EmpresaEN.idEmpresa;
-            CajCEN.SaldoIncial = _saldoIncial;
-            CajCEN.TotalIngreso = _ingreso;
-            CajCEN.TotalEgreso = _egreso;
-            CajCEN.SaldoFinal = _saldoFinal;
+            AsignarSaldos_CajCEN();
             CajCEN.Observacion = InputBoxObs;
 
             bool EstadoEjecucion = false;
@@ -374,7 +378,8 @@ namespace CapaPresentacion
             if (MCCboCodigo.SelectedValue == null)
                 return;
             var IDCaja= MCCboCodigo.SelectedValue.ToString();
-            FrmReporteMovimiento frm = new FrmReporteMovimiento(IDCaja);
+            AsignarSaldos_CajCEN();
+            FrmReporteMovimiento frm = new FrmReporteMovimiento(IDCaja, CajCEN); 
             frm.Show();
             //frm.Dispose();
         }
