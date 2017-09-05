@@ -28,6 +28,7 @@ namespace CapaPresentacion
             }
         }
 
+
         private class RadInputBoxInternal : Telerik.WinControls.UI.RadForm
         {
 
