@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblEmpresa = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -132,5 +133,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.Label label1;
+        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
     }
 }

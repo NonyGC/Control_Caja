@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">All</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d4b0aa10-7a2e-42a2-95b4-60c27aec094b</ProjectGuid>
+    <OutputType>msi</OutputType>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>AI Setup CajaChica.aip</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <AssemblyName>AI Setup CajaChica</AssemblyName>
+    <Name>AI Setup CajaChica</Name>
+    <RootNamespace>AI Setup CajaChica</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' " />
+  <ItemGroup>
+    <Compile Include="AI Setup CajaChica.aip">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaPresentacion\Capa_Presentacion.csproj">
+      <Name>Capa_Presentacion</Name>
+      <Project>{abf34bbb-c0ea-4aac-99cc-88e0260dfa82}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;References</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Datos\Capa_Datos.csproj">
+      <Name>Capa_Datos</Name>
+      <Project>{657892c5-cf9d-4bc1-b806-3c1c8a340ca3}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;References</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.csproj">
+      <Name>Capa_Entidad</Name>
+      <Project>{b8511b95-920b-4a6f-aa23-2f7315dac127}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;References</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.csproj">
+      <Name>Capa_Negocio</Name>
+      <Project>{ed534ee4-aa3b-4065-972f-fbf0a253a2d9}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;References</OutputsToImport>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Caphyon\Advanced Installer\AdvInstExtTasks.Targets" />
+</Project>
