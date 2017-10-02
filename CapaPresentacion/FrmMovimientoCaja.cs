@@ -47,9 +47,9 @@ namespace CapaPresentacion
         {
             DateTime FechaActual = DateTime.Today;
 
-            lblEmpresa.Text = EmpresaEN.RazonSocial;
+            lblEmpresa.Text = EmpresaEN.RazonSocialStatic;
             lblFecha.Text = FechaActual.ToShortDateString();
-            DataTable dts = MovBL.cargarDatosDeSaldoInicial(EmpresaEN.idEmpresa);
+            DataTable dts = MovBL.cargarDatosDeSaldoInicial(EmpresaEN.idEmpresaStatic);
 
             MCCboCodigo.ValueMember = "ID";
             MCCboCodigo.DisplayMember = "CodigoFecha";
@@ -62,6 +62,7 @@ namespace CapaPresentacion
             cboDocumento.SelectedIndex = -1;
             cboConcepto.SelectedIndex = -1;
             RbtIngreso.Checked = true;
+            BtnAgregar.Text = "AGREGAR";
         }
         private void limpiarControlesDeEntrada()
         {
@@ -194,7 +195,7 @@ namespace CapaPresentacion
 
             string Codigo = MCCboCodigo.SelectedValue.ToString();
 
-            _saldoIncial = MovBL.obtenerSaldoInicial(EmpresaEN.idEmpresa, Codigo, Fecha);
+            _saldoIncial = MovBL.obtenerSaldoInicial(EmpresaEN.idEmpresaStatic, Codigo, Fecha);
             TxtSaldoInicial.Text = _saldoIncial.ToString("C");
             cargarGrillaMovimiento();
         }
@@ -229,7 +230,7 @@ namespace CapaPresentacion
                 return;
 
             CajCEN.id = idCajaInicio;
-            CajCEN.Empresa = EmpresaEN.idEmpresa;
+            CajCEN.Empresa = EmpresaEN.idEmpresaStatic;
             AsignarSaldos_CajCEN();
             CajCEN.Observacion = InputBoxObs;
 

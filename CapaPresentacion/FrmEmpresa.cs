@@ -6,41 +6,137 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using Capa_Negocio;
 using Capa_Entidad;
-
+using Capa_Negocio;
 
 namespace CapaPresentacion
 {
     public partial class FrmEmpresa : Telerik.WinControls.UI.RadForm
     {
-
-        //private _empCN Em
+        EmpresaEN EmpEN = new EmpresaEN();
+        EmpresaBL EmpBL = new EmpresaBL();
+        private string idEmpresa;
         public FrmEmpresa()
         {
             InitializeComponent();
-            RadMessageBox.SetThemeName("VisualStudio2012Light");
         }
 
-        EmpresaBL EmpCN = new EmpresaBL();
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            string mssg = "";
+            if (TxtRuc.Text == string.Empty)
+            {
+                mssg = "Ingresar RUC\n";
+                RadMessageBox.Show(mssg, "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error);
+                return;
+            }
 
+            if (TxtRazonSocial.Text == string.Empty)
+            {
+                mssg += "Ingresar Razón Social\n";
+                RadMessageBox.Show(mssg, "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error);
+                return;
+            }
+           
+
+
+            bool EstadoEjecucion = false;
+            if (BtnGuardar.Text == "GUARDAR")
+            {
+                pasarDatos_EmpresaEN_G();
+                EstadoEjecucion = EmpBL.RegistrarEmpresa(EmpEN);
+                if (EstadoEjecucion)
+                {
+                    RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
+                    cargarGrillaEmpresa();
+                    limpiarControlesEditables();
+                }
+            }
+            if (BtnGuardar.Text == "ACTUALIZAR")
+            {
+                pasarDatos_EmpresaEN_A();
+                EstadoEjecucion = EmpBL.ActualizarEmpresa(EmpEN);
+                if (EstadoEjecucion)
+                {
+                    RadMessageBox.Show("SE ACTUALIZO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
+                    cargarGrillaEmpresa();
+                    limpiarControlesEditables();
+                    BtnGuardar.Text = "GUARDAR";
+                }
+
+            }
+
+        }
+        private void pasarDatos_EmpresaEN_G()
+        {
+            EmpEN.ruc = TxtRuc.Text;
+            EmpEN.RazonSocial = TxtRazonSocial.Text;
+            EmpEN.Direccion = TxtDireccion.Text;
+        }
+
+        private void pasarDatos_EmpresaEN_A()
+        {
+            EmpEN.idEmpresa = idEmpresa;
+            pasarDatos_EmpresaEN_G();
+        }
+        private void pasarDatosGrillaAControl()
+        {
+            var RowEmpresa = GrvEmpresa.CurrentRow;
+            idEmpresa = RowEmpresa.Cells["ID"].Value.ToString();
+            TxtRuc.Text = RowEmpresa.Cells["Ruc"].Value.ToString();
+            TxtRazonSocial.Text = RowEmpresa.Cells["RazonSocial"].Value.ToString();
+            TxtDireccion.Text = RowEmpresa.Cells["Direccion"].Value.ToString();
+        }
+
+        private void limpiarControlesEditables()
+        {
+            TxtRuc.Clear();
+            TxtRazonSocial.Clear();
+            TxtDireccion.Clear();
+        }
 
         private void FrmEmpresa_Load(object sender, EventArgs e)
         {
-            cboEmpresa.DataSource = EmpCN.obtenerEmpresa();
-            cboEmpresa.DisplayMember = "RazonSocial";
-            cboEmpresa.ValueMember = "ID";
+            cargarGrillaEmpresa();
         }
-        private void AsignarEmpresaEN() 
+        private void cargarGrillaEmpresa()
         {
-            EmpresaEN.idEmpresa= cboEmpresa.SelectedValue.ToString();
-            EmpresaEN.RazonSocial= cboEmpresa.Text;
+            GrvEmpresa.DataSource = EmpBL.obtenerEmpresa();
         }
-        private void btnIngresar_Click(object sender, EventArgs e)
+
+        private void BtnModificar_Click(object sender, EventArgs e)
         {
-            AsignarEmpresaEN();
-            FrmMenu FrmM = new FrmMenu();
-            FrmM.Show();
+            limpiarControlesEditables();
+            pasarDatosGrillaAControl();
+            BtnGuardar.Text = "ACTUALIZAR";
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            cargarGrillaEmpresa();
+            limpiarControlesEditables();
+            BtnGuardar.Text = "GUARDAR";
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            string id = GrvEmpresa.CurrentRow.Cells["ID"].Value.ToString();
+            if (string.IsNullOrEmpty(id))
+                return;
+            if (RadMessageBox.Show("¿REALMENTE DESEA ELIMINAR?", "MBCORP", MessageBoxButtons.YesNo, RadMessageIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                bool EstadoEjecucion = EmpBL.EliminarEmpresa(id);
+                if (EstadoEjecucion)
+                {
+                    RadMessageBox.Show("SE ELIMINO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
+                    cargarGrillaEmpresa();
+                }
+            }
+        }
+
+        private void TxtRuc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Shared.validarSoloNumeros(e);
         }
     }
 }

@@ -66,7 +66,7 @@ namespace Capa_Datos
             try
             {
                 int i = 0;
-                SqlCommand cmd = CommandProcedure("USP_CajaCierre_ELIMINAR");
+                SqlCommand cmd = CommandProcedure("USP_CajaInicio_ELIMINAR");
                 cmd.Parameters.AddWithValue("@IDCAJA", cajaIniEN.ID);
                 cmd.Parameters.AddWithValue("@IDEmpresa", idEmpresa);
                 i = cmd.ExecuteNonQuery();

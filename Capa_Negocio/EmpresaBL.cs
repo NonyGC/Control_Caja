@@ -18,5 +18,20 @@ namespace Capa_Negocio
         {
             return EmpDao.ObtenerEmpresa();
         }
+
+        public bool RegistrarEmpresa(EmpresaEN empEN)
+        {
+            return EmpDao.RegistrarEmpresa(empEN);
+        }
+
+        public bool ActualizarEmpresa(EmpresaEN empEN)
+        {
+            return EmpDao.ActualizarEmpresa(empEN);
+        }
+
+        public bool EliminarEmpresa(string id)
+        {
+            return EmpDao.EliminarEmpresa(id);
+        }
     }
 }

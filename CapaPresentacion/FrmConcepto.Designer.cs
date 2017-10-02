@@ -172,7 +172,7 @@
             this.radButton1.TabIndex = 15;
             this.radButton1.Text = "CANCELAR";
             this.radButton1.ThemeName = "VisualStudio2012Light";
-            this.radButton1.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.radButton1.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmConcepto
             // 

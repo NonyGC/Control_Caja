@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteMovimiento));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.CrvMovimiento = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -52,6 +53,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(905, 689);
             this.Controls.Add(this.CrvMovimiento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReporteMovimiento";
             // 
             // 

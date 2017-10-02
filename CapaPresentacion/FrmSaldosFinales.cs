@@ -20,9 +20,9 @@ namespace CapaPresentacion
 
         private void FrmSaldosFinales_Load(object sender, EventArgs e)
         {
-            DataTable dt = CCiereBL.obtenerListadoCajaCerrado(EmpresaEN.idEmpresa);
+            DataTable dt = CCiereBL.obtenerListadoCajaCerrado(EmpresaEN.idEmpresaStatic);
             GrvSaldosFinales.DataSource = dt;
-            lblEmpresa.Text = EmpresaEN.RazonSocial;
+            lblEmpresa.Text = EmpresaEN.RazonSocialStatic;
             DateTime FechaActual = DateTime.Today;
             lblFecha.Text = FechaActual.ToShortDateString();
         }

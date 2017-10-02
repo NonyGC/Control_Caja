@@ -23,7 +23,7 @@ namespace CapaPresentacion
         {
             cargarDatosAlFormulario();
             cargarGrillaCajaInicio();
-            lblEmpresa.Text = EmpresaEN.RazonSocial;
+            lblEmpresa.Text = EmpresaEN.RazonSocialStatic;
 
         }
         void cargarDatosAlFormulario()
@@ -48,7 +48,7 @@ namespace CapaPresentacion
         }
         void cargarGrillaCajaInicio()
         {
-            DataTable dtCajaIni = CajaIniBL.ObtenerListadoCajaInicio(EmpresaEN.idEmpresa);
+            DataTable dtCajaIni = CajaIniBL.ObtenerListadoCajaInicio(EmpresaEN.idEmpresaStatic);
             dtgSaldoInicial.DataSource = dtCajaIni;
             decimal Importe = 0;
             foreach (DataRow row in dtCajaIni.Rows)
@@ -121,7 +121,7 @@ namespace CapaPresentacion
         {
             CajaIniEN.ID = txtCodigo.Text;
             CajaIniEN.Fecha = dtpFecha.Value;
-            CajaIniEN.IDEmpresa = EmpresaEN.idEmpresa;
+            CajaIniEN.IDEmpresa = EmpresaEN.idEmpresaStatic;
             CajaIniEN.IDDocumento = int.Parse(cboDocumento.SelectedValue.ToString());
             CajaIniEN.Serie = txtSerieDoc.Text;
             CajaIniEN.Numero = txtNumeroDoc.Text;
@@ -182,10 +182,10 @@ namespace CapaPresentacion
             int estadoCaja = Convert.ToInt16(dtgSaldoInicial.CurrentRow.Cells["Estado"].Value);
             if (estadoCaja == 0)
             {
-                if (RadMessageBox.Show("¿REALMENTE DESEA ELIMINAR?", "MBCORP", MessageBoxButtons.YesNo, RadMessageIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                if (RadMessageBox.Show("¿REALMENTE DESEA ELIMINAR?\n Todos los datos pertenecientes a este saldo inicial seran eliminado", "MBCORP", MessageBoxButtons.YesNo, RadMessageIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     CajaIniEN.ID = codigo;
-                    bool EstadoEjecucion = CajaIniBL.EliminarCajaInicio(CajaIniEN, EmpresaEN.idEmpresa);
+                    bool EstadoEjecucion = CajaIniBL.EliminarCajaInicio(CajaIniEN, EmpresaEN.idEmpresaStatic);
                     if (EstadoEjecucion)
                     {
                         RadMessageBox.Show("SE ELIMINO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info);
@@ -210,7 +210,7 @@ namespace CapaPresentacion
 
         private void BtnReporte_Click(object sender, EventArgs e)
         {
-            FrmReporteCajaIncio frm = new FrmReporteCajaIncio(EmpresaEN.idEmpresa);
+            FrmReporteCajaIncio frm = new FrmReporteCajaIncio(EmpresaEN.idEmpresaStatic);
             frm.ShowDialog();
             frm.Dispose();
         }

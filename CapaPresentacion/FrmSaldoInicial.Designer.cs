@@ -424,9 +424,9 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(650, 245);
+            this.BtnEliminar.Location = new System.Drawing.Point(659, 245);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(100, 24);
+            this.BtnEliminar.Size = new System.Drawing.Size(93, 24);
             this.BtnEliminar.TabIndex = 7;
             this.BtnEliminar.Text = "ELIMINAR";
             this.BtnEliminar.ThemeName = "VisualStudio2012Light";
@@ -455,9 +455,9 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(394, 245);
+            this.BtnCancelar.Location = new System.Drawing.Point(408, 245);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(110, 24);
+            this.BtnCancelar.Size = new System.Drawing.Size(93, 24);
             this.BtnCancelar.TabIndex = 7;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.ThemeName = "VisualStudio2012Light";
@@ -465,9 +465,9 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(279, 245);
+            this.BtnGuardar.Location = new System.Drawing.Point(299, 245);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(110, 24);
+            this.BtnGuardar.Size = new System.Drawing.Size(103, 24);
             this.BtnGuardar.TabIndex = 8;
             this.BtnGuardar.Text = "GUARDAR";
             this.BtnGuardar.ThemeName = "VisualStudio2012Light";
@@ -486,9 +486,9 @@
             // 
             // BtnModificar
             // 
-            this.BtnModificar.Location = new System.Drawing.Point(544, 245);
+            this.BtnModificar.Location = new System.Drawing.Point(560, 245);
             this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(100, 24);
+            this.BtnModificar.Size = new System.Drawing.Size(93, 24);
             this.BtnModificar.TabIndex = 7;
             this.BtnModificar.Text = "MODIFICAR";
             this.BtnModificar.ThemeName = "VisualStudio2012Light";
@@ -496,9 +496,9 @@
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(81, 245);
+            this.radButton1.Location = new System.Drawing.Point(31, 245);
             this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(169, 24);
+            this.radButton1.Size = new System.Drawing.Size(138, 24);
             this.radButton1.TabIndex = 24;
             this.radButton1.Text = "REPORTE";
             this.radButton1.ThemeName = "VisualStudio2012Light";
@@ -514,8 +514,8 @@
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblEmpresa);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dtgSaldoInicial);
             this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.dtgSaldoInicial);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.groupBox3);

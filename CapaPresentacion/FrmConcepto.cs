@@ -34,7 +34,7 @@ namespace CapaPresentacion
             grvConcepto.DataSource = dt;
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             txtDescripcion.Clear();
             txtID.Clear();

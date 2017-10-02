@@ -741,7 +741,7 @@
             // 
             // btnReporte
             // 
-            this.btnReporte.Location = new System.Drawing.Point(30, 224);
+            this.btnReporte.Location = new System.Drawing.Point(15, 224);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(177, 24);
             this.btnReporte.TabIndex = 37;

@@ -8,17 +8,12 @@ namespace Capa_Entidad
 {
     public class EmpresaEN
     {
-        static string _idEmpresa ;
-        static string _RazonSocial ;
-        public static string idEmpresa 
-        {
-            get { return _idEmpresa; }
-            set { _idEmpresa = value; }
-        }
-        public static string RazonSocial
-        {
-            get { return _RazonSocial; }
-            set { _RazonSocial = value; }
-        }
+        public static string idEmpresaStatic  { get; set; }
+        public static string RazonSocialStatic { get; set; }
+        public string idEmpresa { get; set; }
+        public string RazonSocial { get; set; }
+        public string Direccion { get; set; } 
+        public string ruc { get; set; } 
+
     }
 }

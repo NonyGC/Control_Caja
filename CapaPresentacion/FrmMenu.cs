@@ -20,7 +20,7 @@ namespace CapaPresentacion
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-            lblEmpresa.Text = EmpresaEN.RazonSocial;
+            lblEmpresa.Text = EmpresaEN.RazonSocialStatic;
         }
 
         private void radButton1_Click(object sender, EventArgs e)
