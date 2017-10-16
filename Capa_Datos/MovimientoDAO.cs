@@ -37,7 +37,7 @@ namespace Capa_Datos
                 int i;
                 var _ = cajCEN;
                 SqlCommand cmd = CommandProcedure("USP_CajaCierre_REGISTRAR");
-                object[] env = { _.id,_.Empresa, _.SaldoIncial, _.TotalIngreso, _.TotalEgreso, _.SaldoFinal, _.Observacion };
+                object[] env = { _.id, _.Empresa, _.SaldoIncial, _.TotalIngreso, _.TotalEgreso, _.SaldoFinal, _.Observacion };
                 cmd = Parameters(cmd, env);
                 i = cmd.ExecuteNonQuery();
                 return i > 0 ? true : false;
@@ -59,7 +59,7 @@ namespace Capa_Datos
             SqlCommand cmd = CommandProcedure("USP_Movimiento_REPORTE_DETALLE");
             cmd.Parameters.AddWithValue("@IDCaja", iDCaja);
             dtDetalle = GetDataTable(cmd);
-            return dtDetalle; 
+            return dtDetalle;
         }
 
         public DataTable cargarDatosDeCabeceraReporte(string iDCaja)
@@ -69,7 +69,7 @@ namespace Capa_Datos
             cmd.Parameters.AddWithValue("@IDCaja", iDCaja);
             dtCabecera = GetDataTable(cmd);
             return dtCabecera;
-        } 
+        }
 
         public bool EliminarMovimento(MovimientoEN movEN)
         {
@@ -100,7 +100,7 @@ namespace Capa_Datos
                 int i;
                 var _ = movEN;
                 SqlCommand cmd = CommandProcedure("USP_Movimiento_ACTUALIZAR");
-                object[] env = { _.IdMov,_.IDCaja, _.Concepto, _.Observacion, _.IDDocumento, _.Serie, _.Numero, _.TipoMovimiento, _.Monto };
+                object[] env = { _.IdMov, _.IDCaja, _.Concepto, _.Observacion, _.IDDocumento, _.Serie, _.Numero, _.TipoMovimiento, _.Monto, _.RecibidoPor, _.AprobadoPor };
                 cmd = Parameters(cmd, env);
                 i = cmd.ExecuteNonQuery();
                 return i > 0 ? true : false;
@@ -155,7 +155,7 @@ namespace Capa_Datos
                 int i;
                 var _ = movEN;
                 SqlCommand cmd = CommandProcedure("USP_Movimiento_REGISTRAR");
-                object[] env = { _.IDCaja, _.Concepto, _.Observacion, _.IDDocumento, _.Serie, _.Numero, _.TipoMovimiento, _.Monto };
+                object[] env = { _.IDCaja, _.Concepto, _.Observacion, _.IDDocumento, _.Serie, _.Numero, _.TipoMovimiento, _.Monto, _.RecibidoPor, _.AprobadoPor };
                 cmd = Parameters(cmd, env);
                 i = cmd.ExecuteNonQuery();
                 return i > 0 ? true : false;

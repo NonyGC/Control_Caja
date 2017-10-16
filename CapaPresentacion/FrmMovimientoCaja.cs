@@ -61,7 +61,7 @@ namespace CapaPresentacion
         {
             cboDocumento.SelectedIndex = -1;
             cboConcepto.SelectedIndex = -1;
-            RbtIngreso.Checked = true;
+            CboMovimieto.SelectedIndex = -1;
             BtnAgregar.Text = "AGREGAR";
         }
         private void limpiarControlesDeEntrada()
@@ -70,6 +70,8 @@ namespace CapaPresentacion
             TxtNumero.Clear();
             TxtMonto.Clear();
             TxtObservacion.Clear();
+            TxtRecibidoPor.Clear();
+            TxtAprobadoPor.Clear();
         }
 
         private void cargarGrillaMovimiento()
@@ -119,12 +121,10 @@ namespace CapaPresentacion
             Shared.validarSoloNumeros(e);
         }
 
-
         private void MCCboCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
-
 
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -144,12 +144,18 @@ namespace CapaPresentacion
                 return;
             if (cboConcepto.SelectedValue == null)
                 return;
-            if (RbtEgreso.Checked == true)
-                if (validarEgresoMovimiento() == false)
+            if (string.IsNullOrEmpty(CboMovimieto.SelectedItem.Text))
+                return;
+
+            //Accion se realiza al seleccionar egreso en cbomoviminto
+            if (CboMovimieto.SelectedIndex == 1)
+            {
+                if (validarMontoEgresoMovimiento() == false)
                 {
                     RadMessageBox.Show("VALOR DE EGRESO EXCEDE EL MONTO EXISTENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error);
                     return;
                 }
+            }
 
             bool EstadoEjecucion = false;
             if (BtnAgregar.Text == "AGREGAR")
@@ -179,7 +185,7 @@ namespace CapaPresentacion
                 }
             }
         }
-        private bool validarEgresoMovimiento()
+        private bool validarMontoEgresoMovimiento()
         {
             var resto = (_saldoFinal - Convert.ToDecimal(TxtMonto.Text));
             return (resto < 0) ? false : true;
@@ -342,10 +348,8 @@ namespace CapaPresentacion
             TxtSerie.Text = RowCurrent.Cells["Serie"].Value.ToString();
             TxtNumero.Text = RowCurrent.Cells["Numero"].Value.ToString();
             var Movimiento = RowCurrent.Cells["Movimiento"].Value.ToString();
-            if (Movimiento == "INGRESO")
-                RbtIngreso.Checked = true;
-            if (Movimiento == "EGRESO")
-                RbtEgreso.Checked = true;
+            CboMovimieto.SelectedValue = Movimiento;
+
 
             cboDocumento.SelectedValue = RowCurrent.Cells["IDDocumento"].Value;
             var montogrid = RowCurrent.Cells["Monto"].Value.ToString();
@@ -354,6 +358,8 @@ namespace CapaPresentacion
 
             TxtObservacion.Text = RowCurrent.Cells["Observacion"].Value.ToString();
             cboConcepto.SelectedValue = RowCurrent.Cells["Concepto"].Value;
+            TxtRecibidoPor.Text = RowCurrent.Cells["RecibidoPor"].Value.ToString();
+            TxtAprobadoPor.Text = RowCurrent.Cells["AprobadoPor"].Value.ToString();
         }
 
         private void MCCboCodigo_SelectedIndexChanged(object sender, EventArgs e)
@@ -378,9 +384,9 @@ namespace CapaPresentacion
         {
             if (MCCboCodigo.SelectedValue == null)
                 return;
-            var IDCaja= MCCboCodigo.SelectedValue.ToString();
+            var IDCaja = MCCboCodigo.SelectedValue.ToString();
             AsignarSaldos_CajCEN();
-            FrmReporteMovimiento frm = new FrmReporteMovimiento(IDCaja, CajCEN); 
+            FrmReporteMovimiento frm = new FrmReporteMovimiento(IDCaja, CajCEN);
             frm.Show();
             //frm.Dispose();
         }
@@ -393,8 +399,10 @@ namespace CapaPresentacion
             MovEN.IDDocumento = cboDocumento.SelectedValue.ToString();
             MovEN.Serie = TxtSerie.Text;
             MovEN.Numero = TxtNumero.Text;
-            MovEN.TipoMovimiento = RbtIngreso.Checked == true ? "INGRESO" : "EGRESO";
+            MovEN.TipoMovimiento = CboMovimieto.SelectedItem.Text;
             MovEN.Monto = TxtMonto.Text;
+            MovEN.RecibidoPor = TxtRecibidoPor.Text;
+            MovEN.AprobadoPor = TxtAprobadoPor.Text;
         }
 
     }

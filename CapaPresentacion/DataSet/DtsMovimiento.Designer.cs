@@ -651,6 +651,10 @@ namespace CapaPresentacion.DataSet {
             
             private global::System.Data.DataColumn columnMonto;
             
+            private global::System.Data.DataColumn columnRecibidoPor;
+            
+            private global::System.Data.DataColumn columnAprobadoPor;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public USP_Movimiento_REPORTE_DETALLEDataTable() {
@@ -750,6 +754,22 @@ namespace CapaPresentacion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RecibidoPorColumn {
+                get {
+                    return this.columnRecibidoPor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AprobadoPorColumn {
+                get {
+                    return this.columnAprobadoPor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -785,7 +805,7 @@ namespace CapaPresentacion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USP_Movimiento_REPORTE_DETALLERow AddUSP_Movimiento_REPORTE_DETALLERow(string Cod, string Descripcion, string Observacion, string Comprobante, string Serie, string Numero, string TipoMovimiento, decimal Monto) {
+            public USP_Movimiento_REPORTE_DETALLERow AddUSP_Movimiento_REPORTE_DETALLERow(string Cod, string Descripcion, string Observacion, string Comprobante, string Serie, string Numero, string TipoMovimiento, decimal Monto, string RecibidoPor, string AprobadoPor) {
                 USP_Movimiento_REPORTE_DETALLERow rowUSP_Movimiento_REPORTE_DETALLERow = ((USP_Movimiento_REPORTE_DETALLERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cod,
@@ -795,7 +815,9 @@ namespace CapaPresentacion.DataSet {
                         Serie,
                         Numero,
                         TipoMovimiento,
-                        Monto};
+                        Monto,
+                        RecibidoPor,
+                        AprobadoPor};
                 rowUSP_Movimiento_REPORTE_DETALLERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUSP_Movimiento_REPORTE_DETALLERow);
                 return rowUSP_Movimiento_REPORTE_DETALLERow;
@@ -826,6 +848,8 @@ namespace CapaPresentacion.DataSet {
                 this.columnNumero = base.Columns["Numero"];
                 this.columnTipoMovimiento = base.Columns["TipoMovimiento"];
                 this.columnMonto = base.Columns["Monto"];
+                this.columnRecibidoPor = base.Columns["RecibidoPor"];
+                this.columnAprobadoPor = base.Columns["AprobadoPor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -847,6 +871,10 @@ namespace CapaPresentacion.DataSet {
                 base.Columns.Add(this.columnTipoMovimiento);
                 this.columnMonto = new global::System.Data.DataColumn("Monto", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMonto);
+                this.columnRecibidoPor = new global::System.Data.DataColumn("RecibidoPor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRecibidoPor);
+                this.columnAprobadoPor = new global::System.Data.DataColumn("AprobadoPor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAprobadoPor);
                 this.columnCod.AllowDBNull = false;
                 this.columnCod.MaxLength = 10;
                 this.columnDescripcion.MaxLength = 100;
@@ -855,6 +883,8 @@ namespace CapaPresentacion.DataSet {
                 this.columnSerie.MaxLength = 5;
                 this.columnNumero.MaxLength = 10;
                 this.columnTipoMovimiento.MaxLength = 20;
+                this.columnRecibidoPor.MaxLength = 50;
+                this.columnAprobadoPor.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1269,6 +1299,40 @@ namespace CapaPresentacion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RecibidoPor {
+                get {
+                    try {
+                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.RecibidoPorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RecibidoPor\' de la tabla \'USP_Movimiento_REPORTE_DETALLE\'" +
+                                " es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.RecibidoPorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string AprobadoPor {
+                get {
+                    try {
+                        return ((string)(this[this.tableUSP_Movimiento_REPORTE_DETALLE.AprobadoPorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AprobadoPor\' de la tabla \'USP_Movimiento_REPORTE_DETALLE\'" +
+                                " es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUSP_Movimiento_REPORTE_DETALLE.AprobadoPorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDescripcionNull() {
                 return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.DescripcionColumn);
             }
@@ -1349,6 +1413,30 @@ namespace CapaPresentacion.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMontoNull() {
                 this[this.tableUSP_Movimiento_REPORTE_DETALLE.MontoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRecibidoPorNull() {
+                return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.RecibidoPorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRecibidoPorNull() {
+                this[this.tableUSP_Movimiento_REPORTE_DETALLE.RecibidoPorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAprobadoPorNull() {
+                return this.IsNull(this.tableUSP_Movimiento_REPORTE_DETALLE.AprobadoPorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAprobadoPorNull() {
+                this[this.tableUSP_Movimiento_REPORTE_DETALLE.AprobadoPorColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1738,6 +1826,8 @@ namespace CapaPresentacion.DataSet.DtsMovimientoTableAdapters {
             tableMapping.ColumnMappings.Add("Numero", "Numero");
             tableMapping.ColumnMappings.Add("TipoMovimiento", "TipoMovimiento");
             tableMapping.ColumnMappings.Add("Monto", "Monto");
+            tableMapping.ColumnMappings.Add("RecibidoPor", "RecibidoPor");
+            tableMapping.ColumnMappings.Add("AprobadoPor", "AprobadoPor");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

@@ -42,7 +42,8 @@
             this.CrvMovimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CrvMovimiento.Location = new System.Drawing.Point(0, 0);
             this.CrvMovimiento.Name = "CrvMovimiento";
-            this.CrvMovimiento.Size = new System.Drawing.Size(905, 689);
+            this.CrvMovimiento.ShowRefreshButton = false;
+            this.CrvMovimiento.Size = new System.Drawing.Size(1190, 689);
             this.CrvMovimiento.TabIndex = 0;
             this.CrvMovimiento.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -51,7 +52,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(905, 689);
+            this.ClientSize = new System.Drawing.Size(1190, 689);
             this.Controls.Add(this.CrvMovimiento);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReporteMovimiento";

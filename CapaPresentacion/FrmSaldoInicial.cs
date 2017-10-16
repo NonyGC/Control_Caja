@@ -24,6 +24,7 @@ namespace CapaPresentacion
             cargarDatosAlFormulario();
             cargarGrillaCajaInicio();
             lblEmpresa.Text = EmpresaEN.RazonSocialStatic;
+            
 
         }
         void cargarDatosAlFormulario()
@@ -32,7 +33,7 @@ namespace CapaPresentacion
 
             lblFecha.Text = FechaActual.ToShortDateString();
             dtpFecha.Value = FechaActual;
-            //cargarCboDocumento();
+            cargarCboDocumento();
             dropDownListLimitAutocomplete();
         }
         private void cargarCboDocumento()
@@ -214,5 +215,6 @@ namespace CapaPresentacion
             frm.ShowDialog();
             frm.Dispose();
         }
+
     }
 }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -37,12 +39,15 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMovimientoCaja));
@@ -50,16 +55,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboDocumento = new Telerik.WinControls.UI.RadDropDownList();
+            this.TxtAprobadoPor = new Telerik.WinControls.UI.RadTextBox();
+            this.TxtMonto = new Telerik.WinControls.UI.RadTextBox();
+            this.CboMovimieto = new Telerik.WinControls.UI.RadDropDownList();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtNumero = new Telerik.WinControls.UI.RadTextBox();
             this.TxtSerie = new Telerik.WinControls.UI.RadTextBox();
+            this.TxtRecibidoPor = new Telerik.WinControls.UI.RadTextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnNuevoDocumento = new Telerik.WinControls.UI.RadButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.RbtEgreso = new System.Windows.Forms.RadioButton();
-            this.RbtIngreso = new System.Windows.Forms.RadioButton();
-            this.TxtMonto = new Telerik.WinControls.UI.RadTextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.cboConcepto = new Telerik.WinControls.UI.RadDropDownList();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -92,11 +100,13 @@
             this.btnReporte = new Telerik.WinControls.UI.RadButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboDocumento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtAprobadoPor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMonto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CboMovimieto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNumero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSerie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRecibidoPor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnNuevoDocumento)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtMonto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboConcepto)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtObservacion)).BeginInit();
@@ -138,16 +148,23 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cboDocumento);
+            this.groupBox1.Controls.Add(this.TxtAprobadoPor);
+            this.groupBox1.Controls.Add(this.TxtMonto);
+            this.groupBox1.Controls.Add(this.CboMovimieto);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.TxtNumero);
             this.groupBox1.Controls.Add(this.TxtSerie);
+            this.groupBox1.Controls.Add(this.TxtRecibidoPor);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.BtnNuevoDocumento);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(13, 142);
+            this.groupBox1.Location = new System.Drawing.Point(15, 148);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(518, 75);
+            this.groupBox1.Size = new System.Drawing.Size(756, 132);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " COMPROBANTE";
@@ -163,11 +180,57 @@
             this.cboDocumento.ThemeName = "VisualStudio2012Light";
             this.cboDocumento.Enter += new System.EventHandler(this.cboDocumento_Enter);
             // 
+            // TxtAprobadoPor
+            // 
+            this.TxtAprobadoPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtAprobadoPor.Location = new System.Drawing.Point(430, 99);
+            this.TxtAprobadoPor.MinimumSize = new System.Drawing.Size(0, 24);
+            this.TxtAprobadoPor.Name = "TxtAprobadoPor";
+            // 
+            // 
+            // 
+            this.TxtAprobadoPor.RootElement.MinSize = new System.Drawing.Size(0, 24);
+            this.TxtAprobadoPor.Size = new System.Drawing.Size(298, 24);
+            this.TxtAprobadoPor.TabIndex = 13;
+            this.TxtAprobadoPor.ThemeName = "VisualStudio2012Light";
+            // 
+            // TxtMonto
+            // 
+            this.TxtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMonto.Location = new System.Drawing.Point(615, 45);
+            this.TxtMonto.MaxLength = 18;
+            this.TxtMonto.MinimumSize = new System.Drawing.Size(0, 24);
+            this.TxtMonto.Name = "TxtMonto";
+            this.TxtMonto.NullText = "Monto";
+            // 
+            // 
+            // 
+            this.TxtMonto.RootElement.MinSize = new System.Drawing.Size(0, 24);
+            this.TxtMonto.Size = new System.Drawing.Size(113, 24);
+            this.TxtMonto.TabIndex = 11;
+            this.TxtMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtMonto.ThemeName = "VisualStudio2012Light";
+            this.TxtMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMonto_KeyPress);
+            // 
+            // CboMovimieto
+            // 
+            this.CboMovimieto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.CboMovimieto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radListDataItem1.Text = "INGRESO";
+            radListDataItem2.Text = "EGRESO";
+            this.CboMovimieto.Items.Add(radListDataItem1);
+            this.CboMovimieto.Items.Add(radListDataItem2);
+            this.CboMovimieto.Location = new System.Drawing.Point(615, 16);
+            this.CboMovimieto.Name = "CboMovimieto";
+            this.CboMovimieto.Size = new System.Drawing.Size(113, 25);
+            this.CboMovimieto.TabIndex = 10;
+            this.CboMovimieto.ThemeName = "VisualStudio2012Light";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(167, 48);
+            this.label8.Location = new System.Drawing.Point(188, 50);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 15);
             this.label8.TabIndex = 1;
@@ -177,7 +240,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(52, 48);
+            this.label7.Location = new System.Drawing.Point(52, 50);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 15);
             this.label7.TabIndex = 1;
@@ -186,7 +249,7 @@
             // TxtNumero
             // 
             this.TxtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNumero.Location = new System.Drawing.Point(200, 43);
+            this.TxtNumero.Location = new System.Drawing.Point(221, 45);
             this.TxtNumero.MaxLength = 8;
             this.TxtNumero.MinimumSize = new System.Drawing.Size(0, 24);
             this.TxtNumero.Name = "TxtNumero";
@@ -194,7 +257,7 @@
             // 
             // 
             this.TxtNumero.RootElement.MinSize = new System.Drawing.Size(0, 24);
-            this.TxtNumero.Size = new System.Drawing.Size(105, 24);
+            this.TxtNumero.Size = new System.Drawing.Size(113, 24);
             this.TxtNumero.TabIndex = 9;
             this.TxtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtNumero.ThemeName = "VisualStudio2012Light";
@@ -203,7 +266,7 @@
             // TxtSerie
             // 
             this.TxtSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSerie.Location = new System.Drawing.Point(100, 43);
+            this.TxtSerie.Location = new System.Drawing.Point(100, 45);
             this.TxtSerie.MaxLength = 4;
             this.TxtSerie.MinimumSize = new System.Drawing.Size(0, 24);
             this.TxtSerie.Name = "TxtSerie";
@@ -216,6 +279,40 @@
             this.TxtSerie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtSerie.ThemeName = "VisualStudio2012Light";
             this.TxtSerie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_KeyPress);
+            // 
+            // TxtRecibidoPor
+            // 
+            this.TxtRecibidoPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRecibidoPor.Location = new System.Drawing.Point(98, 99);
+            this.TxtRecibidoPor.MinimumSize = new System.Drawing.Size(0, 24);
+            this.TxtRecibidoPor.Name = "TxtRecibidoPor";
+            // 
+            // 
+            // 
+            this.TxtRecibidoPor.RootElement.MinSize = new System.Drawing.Size(0, 24);
+            this.TxtRecibidoPor.Size = new System.Drawing.Size(298, 24);
+            this.TxtRecibidoPor.TabIndex = 12;
+            this.TxtRecibidoPor.ThemeName = "VisualStudio2012Light";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(430, 81);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(87, 15);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Aprobado por |";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(532, 21);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(77, 15);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Movimiento |";
             // 
             // label6
             // 
@@ -237,57 +334,15 @@
             this.BtnNuevoDocumento.ThemeName = "VisualStudio2012Light";
             this.BtnNuevoDocumento.Click += new System.EventHandler(this.BtnNuevoDocumento_Click);
             // 
-            // groupBox2
+            // label14
             // 
-            this.groupBox2.Controls.Add(this.RbtEgreso);
-            this.groupBox2.Controls.Add(this.RbtIngreso);
-            this.groupBox2.Controls.Add(this.TxtMonto);
-            this.groupBox2.Location = new System.Drawing.Point(537, 143);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(221, 75);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "MOVIMIENTO";
-            // 
-            // RbtEgreso
-            // 
-            this.RbtEgreso.AutoSize = true;
-            this.RbtEgreso.Location = new System.Drawing.Point(116, 19);
-            this.RbtEgreso.Name = "RbtEgreso";
-            this.RbtEgreso.Size = new System.Drawing.Size(67, 17);
-            this.RbtEgreso.TabIndex = 12;
-            this.RbtEgreso.Text = "EGRESO";
-            this.RbtEgreso.UseVisualStyleBackColor = true;
-            // 
-            // RbtIngreso
-            // 
-            this.RbtIngreso.AutoSize = true;
-            this.RbtIngreso.Checked = true;
-            this.RbtIngreso.Location = new System.Drawing.Point(38, 19);
-            this.RbtIngreso.Name = "RbtIngreso";
-            this.RbtIngreso.Size = new System.Drawing.Size(72, 17);
-            this.RbtIngreso.TabIndex = 11;
-            this.RbtIngreso.TabStop = true;
-            this.RbtIngreso.Text = "INGRESO";
-            this.RbtIngreso.UseVisualStyleBackColor = true;
-            // 
-            // TxtMonto
-            // 
-            this.TxtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMonto.Location = new System.Drawing.Point(38, 43);
-            this.TxtMonto.MaxLength = 18;
-            this.TxtMonto.MinimumSize = new System.Drawing.Size(0, 24);
-            this.TxtMonto.Name = "TxtMonto";
-            this.TxtMonto.NullText = "Monto";
-            // 
-            // 
-            // 
-            this.TxtMonto.RootElement.MinSize = new System.Drawing.Size(0, 24);
-            this.TxtMonto.Size = new System.Drawing.Size(145, 24);
-            this.TxtMonto.TabIndex = 13;
-            this.TxtMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtMonto.ThemeName = "VisualStudio2012Light";
-            this.TxtMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMonto_KeyPress);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(97, 81);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 15);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Recibido por |";
             // 
             // cboConcepto
             // 
@@ -327,7 +382,7 @@
             this.groupBox3.Controls.Add(this.cboConcepto);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.radButton5);
-            this.groupBox3.Location = new System.Drawing.Point(246, 70);
+            this.groupBox3.Location = new System.Drawing.Point(259, 70);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(512, 72);
             this.groupBox3.TabIndex = 3;
@@ -361,48 +416,60 @@
             // grvMovimiento
             // 
             this.grvMovimiento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grvMovimiento.Location = new System.Drawing.Point(12, 254);
+            this.grvMovimiento.Location = new System.Drawing.Point(15, 322);
             // 
             // 
             // 
             this.grvMovimiento.MasterTemplate.AllowAddNewRow = false;
             gridViewTextBoxColumn1.FieldName = "ID";
             gridViewTextBoxColumn1.HeaderText = "ID";
-            gridViewTextBoxColumn1.IsVisible = false;
             gridViewTextBoxColumn1.Name = "ID";
-            gridViewTextBoxColumn2.FieldName = "IDDocumento";
-            gridViewTextBoxColumn2.HeaderText = "IDDocumento";
+            gridViewTextBoxColumn2.FieldName = "Concepto";
+            gridViewTextBoxColumn2.HeaderText = "Concepto";
             gridViewTextBoxColumn2.IsVisible = false;
-            gridViewTextBoxColumn2.Name = "IDDocumento";
-            gridViewTextBoxColumn3.FieldName = "Descripcion";
-            gridViewTextBoxColumn3.HeaderText = "Comprobante";
-            gridViewTextBoxColumn3.Name = "column1";
-            gridViewTextBoxColumn3.Width = 280;
-            gridViewTextBoxColumn4.FieldName = "Serie";
-            gridViewTextBoxColumn4.HeaderText = "Serie";
-            gridViewTextBoxColumn4.Name = "Serie";
-            gridViewTextBoxColumn4.Width = 80;
-            gridViewTextBoxColumn5.FieldName = "Numero";
-            gridViewTextBoxColumn5.HeaderText = "Numero";
-            gridViewTextBoxColumn5.Name = "Numero";
-            gridViewTextBoxColumn5.Width = 100;
-            gridViewTextBoxColumn6.FieldName = "TipoMovimiento";
-            gridViewTextBoxColumn6.HeaderText = "Movimiento";
-            gridViewTextBoxColumn6.Name = "Movimiento";
-            gridViewTextBoxColumn6.Width = 120;
-            gridViewTextBoxColumn7.FieldName = "Monto";
-            gridViewTextBoxColumn7.FormatString = "{0:C}";
-            gridViewTextBoxColumn7.HeaderText = "Monto";
-            gridViewTextBoxColumn7.Name = "Monto";
-            gridViewTextBoxColumn7.Width = 150;
-            gridViewTextBoxColumn8.FieldName = "Observacion";
-            gridViewTextBoxColumn8.HeaderText = "Observacion";
-            gridViewTextBoxColumn8.IsVisible = false;
-            gridViewTextBoxColumn8.Name = "Observacion";
-            gridViewTextBoxColumn9.FieldName = "Concepto";
-            gridViewTextBoxColumn9.HeaderText = "Concepto";
-            gridViewTextBoxColumn9.IsVisible = false;
-            gridViewTextBoxColumn9.Name = "Concepto";
+            gridViewTextBoxColumn2.Name = "Concepto";
+            gridViewTextBoxColumn2.Width = 100;
+            gridViewTextBoxColumn3.FieldName = "ConceptoDescripcion";
+            gridViewTextBoxColumn3.HeaderText = "Concepto";
+            gridViewTextBoxColumn3.Name = "ConceptoDescripcion";
+            gridViewTextBoxColumn3.Width = 100;
+            gridViewTextBoxColumn4.FieldName = "Observacion";
+            gridViewTextBoxColumn4.HeaderText = "Observacion";
+            gridViewTextBoxColumn4.Name = "Observacion";
+            gridViewTextBoxColumn4.Width = 100;
+            gridViewTextBoxColumn5.FieldName = "IDDocumento";
+            gridViewTextBoxColumn5.HeaderText = "IDDocumento";
+            gridViewTextBoxColumn5.IsVisible = false;
+            gridViewTextBoxColumn5.Name = "IDDocumento";
+            gridViewTextBoxColumn6.FieldName = "Descripcion";
+            gridViewTextBoxColumn6.HeaderText = "Comprobante";
+            gridViewTextBoxColumn6.Name = "column1";
+            gridViewTextBoxColumn6.Width = 150;
+            gridViewTextBoxColumn7.FieldName = "Serie";
+            gridViewTextBoxColumn7.HeaderText = "Serie";
+            gridViewTextBoxColumn7.Name = "Serie";
+            gridViewTextBoxColumn7.Width = 60;
+            gridViewTextBoxColumn8.FieldName = "Numero";
+            gridViewTextBoxColumn8.HeaderText = "Numero";
+            gridViewTextBoxColumn8.Name = "Numero";
+            gridViewTextBoxColumn8.Width = 80;
+            gridViewTextBoxColumn9.FieldName = "TipoMovimiento";
+            gridViewTextBoxColumn9.HeaderText = "Movimiento";
+            gridViewTextBoxColumn9.Name = "Movimiento";
+            gridViewTextBoxColumn9.Width = 100;
+            gridViewTextBoxColumn10.FieldName = "Monto";
+            gridViewTextBoxColumn10.FormatString = "{0:C}";
+            gridViewTextBoxColumn10.HeaderText = "Monto";
+            gridViewTextBoxColumn10.Name = "Monto";
+            gridViewTextBoxColumn10.Width = 100;
+            gridViewTextBoxColumn11.FieldName = "RecibidoPor";
+            gridViewTextBoxColumn11.HeaderText = "Recibido Por";
+            gridViewTextBoxColumn11.Name = "RecibidoPor";
+            gridViewTextBoxColumn11.Width = 150;
+            gridViewTextBoxColumn12.FieldName = "AprobadoPor";
+            gridViewTextBoxColumn12.HeaderText = "Aprobado Por";
+            gridViewTextBoxColumn12.Name = "AprobadoPor";
+            gridViewTextBoxColumn12.Width = 150;
             this.grvMovimiento.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -412,18 +479,21 @@
             gridViewTextBoxColumn6,
             gridViewTextBoxColumn7,
             gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9});
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12});
             this.grvMovimiento.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.grvMovimiento.Name = "grvMovimiento";
             this.grvMovimiento.ReadOnly = true;
             this.grvMovimiento.ShowGroupPanel = false;
-            this.grvMovimiento.Size = new System.Drawing.Size(745, 183);
+            this.grvMovimiento.Size = new System.Drawing.Size(756, 183);
             this.grvMovimiento.TabIndex = 19;
             this.grvMovimiento.ThemeName = "VisualStudio2012Light";
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(420, 224);
+            this.BtnCancelar.Location = new System.Drawing.Point(417, 292);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(100, 24);
             this.BtnCancelar.TabIndex = 16;
@@ -433,7 +503,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(653, 224);
+            this.BtnEliminar.Location = new System.Drawing.Point(650, 292);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(100, 24);
             this.BtnEliminar.TabIndex = 17;
@@ -443,7 +513,7 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(314, 224);
+            this.BtnAgregar.Location = new System.Drawing.Point(311, 292);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(100, 24);
             this.BtnAgregar.TabIndex = 14;
@@ -471,17 +541,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 15);
+            this.label5.Size = new System.Drawing.Size(87, 15);
             this.label5.TabIndex = 1;
-            this.label5.Text = "SALDO INICIAL";
+            this.label5.Text = "Saldo Inicial";
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(135, 11);
+            this.label9.Location = new System.Drawing.Point(132, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 18);
             this.label9.TabIndex = 1;
@@ -491,7 +561,7 @@
             // TxtTotIngreso
             // 
             this.TxtTotIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotIngreso.Location = new System.Drawing.Point(137, 32);
+            this.TxtTotIngreso.Location = new System.Drawing.Point(132, 32);
             this.TxtTotIngreso.MinimumSize = new System.Drawing.Size(0, 24);
             this.TxtTotIngreso.Name = "TxtTotIngreso";
             this.TxtTotIngreso.ReadOnly = true;
@@ -499,7 +569,7 @@
             // 
             // 
             this.TxtTotIngreso.RootElement.MinSize = new System.Drawing.Size(0, 24);
-            this.TxtTotIngreso.Size = new System.Drawing.Size(79, 24);
+            this.TxtTotIngreso.Size = new System.Drawing.Size(92, 24);
             this.TxtTotIngreso.TabIndex = 2;
             this.TxtTotIngreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtTotIngreso.ThemeName = "VisualStudio2012Light";
@@ -507,7 +577,7 @@
             // TxtTotEgreso
             // 
             this.TxtTotEgreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotEgreso.Location = new System.Drawing.Point(221, 32);
+            this.TxtTotEgreso.Location = new System.Drawing.Point(233, 32);
             this.TxtTotEgreso.MinimumSize = new System.Drawing.Size(0, 24);
             this.TxtTotEgreso.Name = "TxtTotEgreso";
             this.TxtTotEgreso.ReadOnly = true;
@@ -515,7 +585,7 @@
             // 
             // 
             this.TxtTotEgreso.RootElement.MinSize = new System.Drawing.Size(0, 24);
-            this.TxtTotEgreso.Size = new System.Drawing.Size(79, 24);
+            this.TxtTotEgreso.Size = new System.Drawing.Size(92, 24);
             this.TxtTotEgreso.TabIndex = 2;
             this.TxtTotEgreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtTotEgreso.ThemeName = "VisualStudio2012Light";
@@ -523,7 +593,7 @@
             // TxtSaldoFinal
             // 
             this.TxtSaldoFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSaldoFinal.Location = new System.Drawing.Point(12, 76);
+            this.TxtSaldoFinal.Location = new System.Drawing.Point(334, 32);
             this.TxtSaldoFinal.MinimumSize = new System.Drawing.Size(0, 24);
             this.TxtSaldoFinal.Name = "TxtSaldoFinal";
             this.TxtSaldoFinal.ReadOnly = true;
@@ -539,12 +609,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 58);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(334, 14);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 15);
+            this.label10.Size = new System.Drawing.Size(80, 15);
             this.label10.TabIndex = 1;
-            this.label10.Text = "SALDO FINAL";
+            this.label10.Text = "Saldo Final";
             // 
             // label11
             // 
@@ -558,9 +628,10 @@
             // 
             // BtnCerrarCaja
             // 
-            this.BtnCerrarCaja.Location = new System.Drawing.Point(13, 448);
+            this.BtnCerrarCaja.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCerrarCaja.Location = new System.Drawing.Point(10, 512);
             this.BtnCerrarCaja.Name = "BtnCerrarCaja";
-            this.BtnCerrarCaja.Size = new System.Drawing.Size(295, 29);
+            this.BtnCerrarCaja.Size = new System.Drawing.Size(295, 59);
             this.BtnCerrarCaja.TabIndex = 18;
             this.BtnCerrarCaja.Text = "CERRAR CAJA";
             this.BtnCerrarCaja.ThemeName = "VisualStudio2012Light";
@@ -601,7 +672,7 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(219, 11);
+            this.label12.Location = new System.Drawing.Point(233, 12);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(82, 18);
             this.label12.TabIndex = 28;
@@ -637,40 +708,40 @@
             this.MCCboCodigo.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.MCCboCodigo.EditorControl.MasterTemplate.AllowCellContextMenu = false;
             this.MCCboCodigo.EditorControl.MasterTemplate.AllowColumnChooser = false;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "Fecha";
-            gridViewTextBoxColumn10.HeaderText = "Fecha";
-            gridViewTextBoxColumn10.Name = "Fecha";
-            gridViewTextBoxColumn10.ReadOnly = true;
-            gridViewTextBoxColumn10.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
-            gridViewTextBoxColumn10.Width = 81;
-            gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.FieldName = "ID";
-            gridViewTextBoxColumn11.HeaderText = "Codigo";
-            gridViewTextBoxColumn11.Name = "Codigo";
-            gridViewTextBoxColumn11.ReadOnly = true;
-            gridViewTextBoxColumn11.Width = 59;
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "Importe";
-            gridViewTextBoxColumn12.HeaderText = "Importe";
-            gridViewTextBoxColumn12.IsVisible = false;
-            gridViewTextBoxColumn12.Name = "Importe";
             gridViewTextBoxColumn13.EnableExpressionEditor = false;
-            gridViewTextBoxColumn13.FieldName = "Estado";
-            gridViewTextBoxColumn13.HeaderText = "Estado";
-            gridViewTextBoxColumn13.IsVisible = false;
-            gridViewTextBoxColumn13.Name = "Estado";
+            gridViewTextBoxColumn13.FieldName = "Fecha";
+            gridViewTextBoxColumn13.HeaderText = "Fecha";
+            gridViewTextBoxColumn13.Name = "Fecha";
+            gridViewTextBoxColumn13.ReadOnly = true;
+            gridViewTextBoxColumn13.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn13.Width = 81;
             gridViewTextBoxColumn14.EnableExpressionEditor = false;
-            gridViewTextBoxColumn14.FieldName = "CodigoFecha";
-            gridViewTextBoxColumn14.HeaderText = "CodigoFecha";
-            gridViewTextBoxColumn14.IsVisible = false;
-            gridViewTextBoxColumn14.Name = "CodigoFecha";
+            gridViewTextBoxColumn14.FieldName = "ID";
+            gridViewTextBoxColumn14.HeaderText = "Codigo";
+            gridViewTextBoxColumn14.Name = "Codigo";
+            gridViewTextBoxColumn14.ReadOnly = true;
+            gridViewTextBoxColumn14.Width = 59;
+            gridViewTextBoxColumn15.EnableExpressionEditor = false;
+            gridViewTextBoxColumn15.FieldName = "Importe";
+            gridViewTextBoxColumn15.HeaderText = "Importe";
+            gridViewTextBoxColumn15.IsVisible = false;
+            gridViewTextBoxColumn15.Name = "Importe";
+            gridViewTextBoxColumn16.EnableExpressionEditor = false;
+            gridViewTextBoxColumn16.FieldName = "Estado";
+            gridViewTextBoxColumn16.HeaderText = "Estado";
+            gridViewTextBoxColumn16.IsVisible = false;
+            gridViewTextBoxColumn16.Name = "Estado";
+            gridViewTextBoxColumn17.EnableExpressionEditor = false;
+            gridViewTextBoxColumn17.FieldName = "CodigoFecha";
+            gridViewTextBoxColumn17.HeaderText = "CodigoFecha";
+            gridViewTextBoxColumn17.IsVisible = false;
+            gridViewTextBoxColumn17.Name = "CodigoFecha";
             this.MCCboCodigo.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
             gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14});
+            gridViewTextBoxColumn14,
+            gridViewTextBoxColumn15,
+            gridViewTextBoxColumn16,
+            gridViewTextBoxColumn17});
             this.MCCboCodigo.EditorControl.MasterTemplate.EnableGrouping = false;
             this.MCCboCodigo.EditorControl.MasterTemplate.ShowFilteringRow = false;
             sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
@@ -707,7 +778,7 @@
             // 
             // RbtModificar
             // 
-            this.RbtModificar.Location = new System.Drawing.Point(547, 224);
+            this.RbtModificar.Location = new System.Drawing.Point(544, 292);
             this.RbtModificar.Name = "RbtModificar";
             this.RbtModificar.Size = new System.Drawing.Size(100, 24);
             this.RbtModificar.TabIndex = 34;
@@ -725,15 +796,15 @@
             this.groupBox5.Controls.Add(this.TxtTotEgreso);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Location = new System.Drawing.Point(406, 435);
+            this.groupBox5.Location = new System.Drawing.Point(311, 503);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(352, 106);
+            this.groupBox5.Size = new System.Drawing.Size(460, 68);
             this.groupBox5.TabIndex = 35;
             this.groupBox5.TabStop = false;
             // 
             // TxtNumMov
             // 
-            this.TxtNumMov.Location = new System.Drawing.Point(15, 228);
+            this.TxtNumMov.Location = new System.Drawing.Point(22, 294);
             this.TxtNumMov.Name = "TxtNumMov";
             this.TxtNumMov.Size = new System.Drawing.Size(10, 20);
             this.TxtNumMov.TabIndex = 36;
@@ -741,7 +812,7 @@
             // 
             // btnReporte
             // 
-            this.btnReporte.Location = new System.Drawing.Point(15, 224);
+            this.btnReporte.Location = new System.Drawing.Point(15, 292);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(177, 24);
             this.btnReporte.TabIndex = 37;
@@ -753,7 +824,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 546);
+            this.ClientSize = new System.Drawing.Size(787, 581);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.TxtNumMov);
             this.Controls.Add(this.grvMovimiento);
@@ -769,7 +840,6 @@
             this.Controls.Add(this.BtnCerrarCaja);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -786,12 +856,13 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboDocumento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtAprobadoPor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMonto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CboMovimieto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNumero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSerie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRecibidoPor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnNuevoDocumento)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtMonto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboConcepto)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -905,9 +976,6 @@
         private Telerik.WinControls.UI.RadTextBox TxtNumero;
         private Telerik.WinControls.UI.RadTextBox TxtSerie;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton RbtEgreso;
-        private System.Windows.Forms.RadioButton RbtIngreso;
         private Telerik.WinControls.UI.RadTextBox TxtMonto;
         private Telerik.WinControls.UI.RadDropDownList cboConcepto;
         private System.Windows.Forms.Label label2;
@@ -940,5 +1008,11 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private Telerik.WinControls.UI.RadTextBox TxtNumMov;
         private Telerik.WinControls.UI.RadButton btnReporte;
+        private Telerik.WinControls.UI.RadTextBox TxtAprobadoPor;
+        private Telerik.WinControls.UI.RadTextBox TxtRecibidoPor;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private Telerik.WinControls.UI.RadDropDownList CboMovimieto;
+        private System.Windows.Forms.Label label16;
     }
 }

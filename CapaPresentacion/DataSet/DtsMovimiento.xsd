@@ -32,7 +32,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="USP_Movimiento_REPORTE_DETALLETableAdapter" GeneratorDataComponentClassName="USP_Movimiento_REPORTE_DETALLETableAdapter" Name="USP_Movimiento_REPORTE_DETALLE" UserDataComponentName="USP_Movimiento_REPORTE_DETALLETableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Conn2 (Settings)" DbObjectName="DBCAJACHICA.dbo.USP_Movimiento_REPORTE_DETALLE" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Conn2 (Settings)" DbObjectName="dbcajachica.dbo.USP_Movimiento_REPORTE_DETALLE" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.USP_Movimiento_REPORTE_DETALLE</CommandText>
@@ -53,6 +53,8 @@
               <Mapping SourceColumn="Numero" DataSetColumn="Numero" />
               <Mapping SourceColumn="TipoMovimiento" DataSetColumn="TipoMovimiento" />
               <Mapping SourceColumn="Monto" DataSetColumn="Monto" />
+              <Mapping SourceColumn="RecibidoPor" DataSetColumn="RecibidoPor" />
+              <Mapping SourceColumn="AprobadoPor" DataSetColumn="AprobadoPor" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -64,7 +66,7 @@
   <xs:element name="DtsMovimiento" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DtsMovimiento" msprop:Generator_UserDSName="DtsMovimiento">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="USP_Movimiento_REPORTE_CABECERA" msprop:Generator_TableClassName="USP_Movimiento_REPORTE_CABECERADataTable" msprop:Generator_TableVarName="tableUSP_Movimiento_REPORTE_CABECERA" msprop:Generator_TablePropName="USP_Movimiento_REPORTE_CABECERA" msprop:Generator_RowDeletingName="USP_Movimiento_REPORTE_CABECERARowDeleting" msprop:Generator_RowChangingName="USP_Movimiento_REPORTE_CABECERARowChanging" msprop:Generator_RowEvHandlerName="USP_Movimiento_REPORTE_CABECERARowChangeEventHandler" msprop:Generator_RowDeletedName="USP_Movimiento_REPORTE_CABECERARowDeleted" msprop:Generator_UserTableName="USP_Movimiento_REPORTE_CABECERA" msprop:Generator_RowChangedName="USP_Movimiento_REPORTE_CABECERARowChanged" msprop:Generator_RowEvArgName="USP_Movimiento_REPORTE_CABECERARowChangeEvent" msprop:Generator_RowClassName="USP_Movimiento_REPORTE_CABECERARow">
+        <xs:element name="USP_Movimiento_REPORTE_CABECERA" msprop:Generator_TableClassName="USP_Movimiento_REPORTE_CABECERADataTable" msprop:Generator_TableVarName="tableUSP_Movimiento_REPORTE_CABECERA" msprop:Generator_RowChangedName="USP_Movimiento_REPORTE_CABECERARowChanged" msprop:Generator_TablePropName="USP_Movimiento_REPORTE_CABECERA" msprop:Generator_RowDeletingName="USP_Movimiento_REPORTE_CABECERARowDeleting" msprop:Generator_RowChangingName="USP_Movimiento_REPORTE_CABECERARowChanging" msprop:Generator_RowEvHandlerName="USP_Movimiento_REPORTE_CABECERARowChangeEventHandler" msprop:Generator_RowDeletedName="USP_Movimiento_REPORTE_CABECERARowDeleted" msprop:Generator_RowClassName="USP_Movimiento_REPORTE_CABECERARow" msprop:Generator_UserTableName="USP_Movimiento_REPORTE_CABECERA" msprop:Generator_RowEvArgName="USP_Movimiento_REPORTE_CABECERARowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID">
@@ -105,7 +107,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="USP_Movimiento_REPORTE_DETALLE" msprop:Generator_TableClassName="USP_Movimiento_REPORTE_DETALLEDataTable" msprop:Generator_TableVarName="tableUSP_Movimiento_REPORTE_DETALLE" msprop:Generator_RowChangedName="USP_Movimiento_REPORTE_DETALLERowChanged" msprop:Generator_TablePropName="USP_Movimiento_REPORTE_DETALLE" msprop:Generator_RowDeletingName="USP_Movimiento_REPORTE_DETALLERowDeleting" msprop:Generator_RowChangingName="USP_Movimiento_REPORTE_DETALLERowChanging" msprop:Generator_RowEvHandlerName="USP_Movimiento_REPORTE_DETALLERowChangeEventHandler" msprop:Generator_RowDeletedName="USP_Movimiento_REPORTE_DETALLERowDeleted" msprop:Generator_RowClassName="USP_Movimiento_REPORTE_DETALLERow" msprop:Generator_UserTableName="USP_Movimiento_REPORTE_DETALLE" msprop:Generator_RowEvArgName="USP_Movimiento_REPORTE_DETALLERowChangeEvent">
+        <xs:element name="USP_Movimiento_REPORTE_DETALLE" msprop:Generator_TableClassName="USP_Movimiento_REPORTE_DETALLEDataTable" msprop:Generator_TableVarName="tableUSP_Movimiento_REPORTE_DETALLE" msprop:Generator_TablePropName="USP_Movimiento_REPORTE_DETALLE" msprop:Generator_RowDeletingName="USP_Movimiento_REPORTE_DETALLERowDeleting" msprop:Generator_RowChangingName="USP_Movimiento_REPORTE_DETALLERowChanging" msprop:Generator_RowEvHandlerName="USP_Movimiento_REPORTE_DETALLERowChangeEventHandler" msprop:Generator_RowDeletedName="USP_Movimiento_REPORTE_DETALLERowDeleted" msprop:Generator_UserTableName="USP_Movimiento_REPORTE_DETALLE" msprop:Generator_RowChangedName="USP_Movimiento_REPORTE_DETALLERowChanged" msprop:Generator_RowEvArgName="USP_Movimiento_REPORTE_DETALLERowChangeEvent" msprop:Generator_RowClassName="USP_Movimiento_REPORTE_DETALLERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cod" msprop:Generator_ColumnVarNameInTable="columnCod" msprop:Generator_ColumnPropNameInRow="Cod" msprop:Generator_ColumnPropNameInTable="CodColumn" msprop:Generator_UserColumnName="Cod">
@@ -158,6 +160,20 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RecibidoPor" msprop:Generator_ColumnVarNameInTable="columnRecibidoPor" msprop:Generator_ColumnPropNameInRow="RecibidoPor" msprop:Generator_ColumnPropNameInTable="RecibidoPorColumn" msprop:Generator_UserColumnName="RecibidoPor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AprobadoPor" msprop:Generator_ColumnVarNameInTable="columnAprobadoPor" msprop:Generator_ColumnPropNameInRow="AprobadoPor" msprop:Generator_ColumnPropNameInTable="AprobadoPorColumn" msprop:Generator_UserColumnName="AprobadoPor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
